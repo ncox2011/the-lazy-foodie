@@ -1,0 +1,20 @@
+{
+    "recipes": [
+        {
+            "id": 1,
+            "title": "Roatisery chicken with brussel sprouts",
+            "image": "https://images.pexels.com/photos/265393/pexels-photo-265393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+            "prepTime:": "20 minutes",
+            "ingredients": "Whole chicken, brussel sprouts, carrots, seasoning",
+            "directions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla."
+        },
+        {
+            "id": 2,
+            "title": "pickles",
+            "image": "https://images.pexels.com/photos/56014/pizza-pizza-service-italian-eat-56014.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+            "prepTime:": "10 minutes",
+            "ingredients": "cucumbers, jalepenos, broccoli",
+            "directions": "Lorem ipsum dolor sit amet.  Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla."
+        }
+    ]
+}
