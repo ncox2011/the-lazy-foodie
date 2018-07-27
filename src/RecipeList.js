@@ -17,6 +17,13 @@ export default class RecipeList extends Component {
         })
     }
 
+    findRecipe = () => {
+        APIHandler.getData(`recipes?directions=${this.props.onHand}`)
+        .then(recipes => {
+            this.setState({recipes: recipes})
+        })
+    }
+
     componentDidMount() {
         this.refresh()
     }

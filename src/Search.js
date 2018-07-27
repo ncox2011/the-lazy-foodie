@@ -1,17 +1,25 @@
 import React, { Component } from 'react'
 // import { SearchBar } from 'react'
+import APIHandler from './APIHandler'
+import RecipeCard from './RecipeCard'
 
 
 export default class Search extends Component {
-    constructor() {
-        super();
-        this.state={
-            search: ''
-        };
+    
+    state = {
+        recipes: [],
+        filteredRecipes: []
     }
 
     updateSearch(evt) {
         this.setState({search: evt.target.value.substr(0,20)})
+    }
+
+    findRecipe = () => {
+        APIHandler.getData(`recipes?directions=${this.props.onHand}`)
+        .then(recipes => {
+            this.setState({recipes: recipes})
+        })
     }
 
 
@@ -21,8 +29,8 @@ export default class Search extends Component {
         return (
             <div>
                 <ul>
-                    {filteredRecipes.map(recipe => {
-                        return <Recipe recipe={recipe}
+                    {this.state.filteredRecipes.map(recipe => {
+                        return <RecipeCard recipe={recipe}
                         key={recipe.id}/>
                     })}
                 </ul>
