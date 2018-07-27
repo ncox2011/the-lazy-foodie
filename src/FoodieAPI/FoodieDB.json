@@ -26,12 +26,19 @@
     }
   ],
   "friends": [],
-  "favorites": [],
+  "favorites": [
+    {
+      "id": 1,
+      "recipeId": 1,
+      "reviewId": 1,
+      "userId": 1
+    }
+  ],
   "reviews": [],
   "recipes": [
     {
         "id": 1,
-        "title": "Rotisserie chicken with brussel sprouts",
+        "title": "Rotisserie chicken 20 with brussel sprouts",
         "image": "https://images.pexels.com/photos/265393/pexels-photo-265393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "prepTime:": "20 minutes",
         "ingredients": ["Whole chicken", "brussel sprouts", "carrots", "seasoning"],

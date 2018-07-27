@@ -16,7 +16,7 @@ return (
         <Media>
             <MediaContent>
                 <Title isSize={6}>{props.recipe.title}</Title>
-                <Subtitle isSize={2}>Prep-Time:{props.recipe.prepTime}</Subtitle>
+                <p>Prep-Time:{props.recipe.prepTime}</p>
                 <ul>Ingredients
                     .mapthearrayofingredients
                 </ul>
