@@ -7,7 +7,8 @@ import Search from './Search'
 export default class RecipeList extends Component {
 
     state = {
-        recipes: []
+        recipes: [],
+        searchText: ''
     }
 
     refresh = () => {
@@ -17,11 +18,21 @@ export default class RecipeList extends Component {
         })
     }
 
-    findRecipe = () => {
+    findRecipe = (onHand) => {
         APIHandler.getData(`recipes?directions=${this.props.onHand}`)
         .then(recipes => {
             this.setState({recipes: recipes})
         })
+    }
+
+    onSearchChange = event => {
+        this.setState({ searchText: event.target.value})
+    }
+
+    handleSubmit = e => {
+        e.preventDefault();
+        this.props.onSearch(this.state.searchText)
+        e.currentTarget.reset()
     }
 
     componentDidMount() {
@@ -31,7 +42,7 @@ export default class RecipeList extends Component {
     render() {
         return (
             <React.Fragment>
-                <Search/>
+                <Search onSearch={this.findRecipe} />
                 {
                     this.state.recipes.map(recipe => 
                     < RecipeCard key={recipe.id} recipe={recipe}>

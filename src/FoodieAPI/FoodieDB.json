@@ -38,11 +38,11 @@
   "recipes": [
     {
         "id": 1,
-        "title": "Rotisserie chicken 20 with brussel sprouts",
+        "title": "Rotisserie chicken with brussel sprouts",
         "image": "https://images.pexels.com/photos/265393/pexels-photo-265393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "prepTime:": "20 minutes",
         "ingredients": ["Whole chicken", "brussel sprouts", "carrots", "seasoning"],
-        "directions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla."
+        "directions": "Lorem chicken dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla."
     },
     {
         "id": 2,
@@ -50,7 +50,56 @@
         "image": "https://images.pexels.com/photos/56014/pizza-pizza-service-italian-eat-56014.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "prepTime:": "10 minutes",
         "ingredients": ["cucumbers", "jalepenos", "broccoli"],
-        "directions": "Lorem ipsum dolor sit amet.  Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla."
-    }
+        "directions": "Lorem pickles dolor sit amet.  Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla."
+    },
+    {
+      "id": 3,
+      "title": "Teriyaki Chicken",
+      "image": "https://www.edamam.com/web-img/262/262b4353ca25074178ead2a07cdf7dc1.jpg",
+      "url": "http://www.davidlebovitz.com/2012/12/chicken-teriyaki-recipe-japanese-farm-food/",
+      "ingredients": [
+          "1/2 cup (125ml) mirin",
+          "1/2 cup (125ml) soy sauce",
+          "One 2-inch (5cm) piece of fresh ginger, peeled and grated",
+          "2-pounds (900g) boneless chicken thighs (4-8 thighs, depending on size)"
+      ],
+      "directions": "1. Mix together the mirin, soy sauce, and ginger in a large zip-top freezer bag. Add the chicken thighs, force the air from the bag and seal it closed. Massage the chicken to distribute the marinade then refrigerate the chicken for 8 to 12 hours, flipping it over a few times to distribute the marinade. 2. To cook the chicken, drain the chicken over a saucepan and set the pan over medium heat reduce the marinade it comes to a full boil, then reduce the heat and cook it longer, until it’s slightly boiled down. 3. Heat a grill pan or cast-iron skillet over high heat and add the chicken thighs, skin side down, cooking off only the amount of thighs in the pan so they are not crowded – I did three at a time in mine. 4. Sear the thighs for 2-3 minutes on each side, then cover, and cook for 6 minutes. 5. Remove the cover, wipe the condensation off the underside of the cover with a kitchen towel, flip the thighs over, cover, and cook for another 6 minutes. 6. Uncover the chicken and finish cooking them for about 3 minutes on each side, brushing and basting the chicken with the reserved marinade as you go, until the skin and meat have darkened. Remove from the pan and cook off the remaining chicken thighs the same way."
+},
+{
+      "id": 4,
+      "title": "Chicken Vesuvio",
+      "image": "https://www.edamam.com/web-img/e42/e42f9119813e890af34c259785ae1cfb.jpg",
+      "url": "http://www.seriouseats.com/recipes/2011/12/chicken-vesuvio-recipe.html",
+      "ingredients": [
+          "1/2 cup olive oil",
+          "5 cloves garlic, peeled",
+          "2 large russet potatoes, peeled and cut into chunks",
+          "1 3-4 pound chicken, cut into 8 pieces (or 3 pound chicken legs)",
+          "3/4 cup white wine",
+          "3/4 cup chicken stock",
+          "3 tablespoons chopped parsley",
+          "1 tablespoon dried oregano",
+          "Salt and pepper",
+          "1 cup frozen peas, thawed"
+      ],
+      "directions": "1.Heat an oven to 325°F. In a roasting pan (or a large (14-inch) oven-proof skillet), heat the olive oil over medium until shimmering. Add the potatoes and garlic and cook until golden brown, about 12 minutes. Remove to a plate, leaving behind as much oil as possible. 2. Add the chicken to the skillet, skin-side down. Cook until golden and crisp, then turn and cook the other side until golden as well. Add the wine and cook until it reduces by half. 3.Return the garlic and potatoes to the pan, along with the chicken stock, parsley, oregano, and a pinch of salt and pepper. Transfer to the oven and cook, uncovered, until the chicken is cooked through, about 45 minutes. Add the peas to the pan with 5 minutes left in the cooking time. Serve with the roasting juices in the pan."
+},
+{
+      "id": 5,
+      "title": "Chicken Teriyaki",
+      "image": "https://www.edamam.com/web-img/827/8275cc33e9f0f4314617d5a356900aa7.jpg",
+      "url": "http://norecipes.com/blog/2009/07/16/chicken-teriyaki-recipe/",        
+      "ingredients": [
+          "1/2 cup water",
+          "2 tablespoons Japanese soy sauce",
+          "2 tablespoons dark brown sugar",
+          "2 tablespoons mirin",
+          "4-6 skin-on filleted (boneless) chicken thighs",
+          "2 tablespoons mild flavored honey (or maltose)",
+          "2 tablespoons dark soy sauce",
+          "2 tablespoons sake"
+      ],
+      "directions": "Combine the water, soy sauce, brown sugar and mirin in large ziploc bag and add the chicken thighs. Press out as much air as you can and seal the bag. Let this sit in the fridge for at least an hour. To make the teriyaki sauce, just add the honey, soy sauce, mirin and sake to a small sauce pan and boil over medium heat until the sauce is glossy and slightly viscous (it won't get quite as thick as the jarred types). It should take on a caramelized taste but be careful not to burn it. When you're ready to grill the chicken, turn the broiler on and move the oven rack up to the upper position. Put a wire rack on a baking sheet (I use the rack out of my toaster oven), and put the chicken thighs skin side down onto the rack (the idea is to keep the meat elevated off the pan). Grill until brown then flip so the skin side faces up. Baste the skin side with teriyaki sauce and continue to broil until the skin is golden brown with just a few charred spots. Give the chicken one final baste with the teriyaki sauce and serve."
+  }
 ]
 }

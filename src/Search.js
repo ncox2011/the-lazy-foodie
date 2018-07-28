@@ -11,33 +11,28 @@ export default class Search extends Component {
         filteredRecipes: []
     }
 
-    updateSearch(evt) {
-        this.setState({search: evt.target.value.substr(0,20)})
-    }
+    // updateSearch(evt) {
+    //     this.setState({search: evt.target.value.substr(0,20)})
+    // }
 
-    findRecipe = () => {
-        APIHandler.getData(`recipes?directions=${this.props.onHand}`)
-        .then(recipes => {
-            this.setState({recipes: recipes})
-        })
-    }
-
-
-
+    
     render() {
-        let filteredRecipes = this.props.recipes
         return (
-            <div>
-                <ul>
-                    {this.state.filteredRecipes.map(recipe => {
-                        return <RecipeCard recipe={recipe}
-                        key={recipe.id}/>
-                    })}
-                </ul>
-                <input type="text"
-                value={this.state.search}
-                onChange={this.updateSearch.bind(this)}/>
-            </div>
+            
+            <React.Fragment>
+                {
+            <form className="search-form" onSubmit={this.props.handleSumbit}>
+                <label className="is-hidden" htmlFor="search">Find Recipes</label>
+                <input type="search"
+                        onChange={this.props.onSearchChange}
+                        name="search"
+                        ref={(input) => this.onHand = input}
+                        placeholder="Search..."/>
+                <button type="submit" id="submit" className="search-button">Submit</button>
+            </form>
+                }
+            </React.Fragment>
         )
     }
+
 }
