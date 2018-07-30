@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import APIHandler from './APIHandler'
 import { Redirect, Link } from 'react-router-dom'
+import 'bulma/css/bulma.css';
 
 export default class Login extends Component {
     state = {
