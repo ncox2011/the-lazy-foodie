@@ -17,9 +17,13 @@ return (
         <Media>
             <MediaContent>
                 <Title isSize={6}>{props.recipe.title}</Title>
-                <p>Prep-Time:{props.recipe.prepTime}</p>
-                <ul>Ingredients
-                    .mapthearrayofingredients
+                <h3>Ingredients</h3>
+                <ul className="ingredientList">
+                    {
+                        props.recipe.ingredients.map(ingredient => {
+                    return <li key={ingredient}>{ingredient}
+                    </li>})
+                }
                 </ul>
             </MediaContent>
         </Media>
