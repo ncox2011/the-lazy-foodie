@@ -17,7 +17,12 @@ const Welcome = props => {
                 Sign-in
             </Link>
         </Button>
-        <Button>Register</Button>
+        <Button>
+            <Link to={{
+              pathname: "/Register"}}>
+              Register
+            </Link>
+        </Button>
       </Container>
       <Box className="HomeImageSection" pad={{horizontal: 'large'}}>
         <div className="HomeImageShadowWrapper">

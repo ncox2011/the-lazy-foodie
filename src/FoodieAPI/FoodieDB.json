@@ -23,6 +23,12 @@
       "email": "person@gmail.com",
       "password": "1",
       "id": 4
+    },
+    {
+      "name": "nathan",
+      "email": "nate@gmail.com",
+      "password": "1",
+      "id": 5
     }
   ],
   "friends": [],
@@ -37,20 +43,29 @@
   "reviews": [],
   "recipes": [
     {
-        "id": 1,
-        "title": "Rotisserie chicken with brussel sprouts",
-        "image": "https://images.pexels.com/photos/265393/pexels-photo-265393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "prepTime:": "20 minutes",
-        "ingredients": ["Whole chicken", "brussel sprouts", "carrots", "seasoning"],
-        "directions": "Lorem chicken dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla."
+      "id": 1,
+      "title": "Rotisserie chicken with brussel sprouts",
+      "image": "https://images.pexels.com/photos/265393/pexels-photo-265393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "prepTime:": "20 minutes",
+      "ingredients": [
+        "Whole chicken",
+        "brussel sprouts",
+        "carrots",
+        "seasoning"
+      ],
+      "directions": "Lorem chicken dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla."
     },
     {
-        "id": 2,
-        "title": "pickled veggies",
-        "image": "https://images.pexels.com/photos/56014/pizza-pizza-service-italian-eat-56014.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "prepTime:": "10 minutes",
-        "ingredients": ["cucumbers", "jalepenos", "broccoli"],
-        "directions": "Lorem pickles dolor sit amet.  Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla."
+      "id": 2,
+      "title": "pickled veggies",
+      "image": "https://images.pexels.com/photos/56014/pizza-pizza-service-italian-eat-56014.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      "prepTime:": "10 minutes",
+      "ingredients": [
+        "cucumbers",
+        "jalepenos",
+        "broccoli"
+      ],
+      "directions": "Lorem pickles dolor sit amet.  Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla."
     },
     {
       "id": 3,
@@ -58,48 +73,137 @@
       "image": "https://www.edamam.com/web-img/262/262b4353ca25074178ead2a07cdf7dc1.jpg",
       "url": "http://www.davidlebovitz.com/2012/12/chicken-teriyaki-recipe-japanese-farm-food/",
       "ingredients": [
-          "1/2 cup (125ml) mirin",
-          "1/2 cup (125ml) soy sauce",
-          "One 2-inch (5cm) piece of fresh ginger, peeled and grated",
-          "2-pounds (900g) boneless chicken thighs (4-8 thighs, depending on size)"
+        "1/2 cup (125ml) mirin",
+        "1/2 cup (125ml) soy sauce",
+        "One 2-inch (5cm) piece of fresh ginger, peeled and grated",
+        "2-pounds (900g) boneless chicken thighs (4-8 thighs, depending on size)"
       ],
       "directions": "1. Mix together the mirin, soy sauce, and ginger in a large zip-top freezer bag. Add the chicken thighs, force the air from the bag and seal it closed. Massage the chicken to distribute the marinade then refrigerate the chicken for 8 to 12 hours, flipping it over a few times to distribute the marinade. 2. To cook the chicken, drain the chicken over a saucepan and set the pan over medium heat reduce the marinade it comes to a full boil, then reduce the heat and cook it longer, until it’s slightly boiled down. 3. Heat a grill pan or cast-iron skillet over high heat and add the chicken thighs, skin side down, cooking off only the amount of thighs in the pan so they are not crowded – I did three at a time in mine. 4. Sear the thighs for 2-3 minutes on each side, then cover, and cook for 6 minutes. 5. Remove the cover, wipe the condensation off the underside of the cover with a kitchen towel, flip the thighs over, cover, and cook for another 6 minutes. 6. Uncover the chicken and finish cooking them for about 3 minutes on each side, brushing and basting the chicken with the reserved marinade as you go, until the skin and meat have darkened. Remove from the pan and cook off the remaining chicken thighs the same way."
-},
-{
+    },
+    {
       "id": 4,
       "title": "Chicken Vesuvio",
       "image": "https://www.edamam.com/web-img/e42/e42f9119813e890af34c259785ae1cfb.jpg",
       "url": "http://www.seriouseats.com/recipes/2011/12/chicken-vesuvio-recipe.html",
       "ingredients": [
-          "1/2 cup olive oil",
-          "5 cloves garlic, peeled",
-          "2 large russet potatoes, peeled and cut into chunks",
-          "1 3-4 pound chicken, cut into 8 pieces (or 3 pound chicken legs)",
-          "3/4 cup white wine",
-          "3/4 cup chicken stock",
-          "3 tablespoons chopped parsley",
-          "1 tablespoon dried oregano",
-          "Salt and pepper",
-          "1 cup frozen peas, thawed"
+        "1/2 cup olive oil",
+        "5 cloves garlic, peeled",
+        "2 large russet potatoes, peeled and cut into chunks",
+        "1 3-4 pound chicken, cut into 8 pieces (or 3 pound chicken legs)",
+        "3/4 cup white wine",
+        "3/4 cup chicken stock",
+        "3 tablespoons chopped parsley",
+        "1 tablespoon dried oregano",
+        "Salt and pepper",
+        "1 cup frozen peas, thawed"
       ],
       "directions": "1.Heat an oven to 325°F. In a roasting pan (or a large (14-inch) oven-proof skillet), heat the olive oil over medium until shimmering. Add the potatoes and garlic and cook until golden brown, about 12 minutes. Remove to a plate, leaving behind as much oil as possible. 2. Add the chicken to the skillet, skin-side down. Cook until golden and crisp, then turn and cook the other side until golden as well. Add the wine and cook until it reduces by half. 3.Return the garlic and potatoes to the pan, along with the chicken stock, parsley, oregano, and a pinch of salt and pepper. Transfer to the oven and cook, uncovered, until the chicken is cooked through, about 45 minutes. Add the peas to the pan with 5 minutes left in the cooking time. Serve with the roasting juices in the pan."
-},
-{
+    },
+    {
       "id": 5,
       "title": "Chicken Teriyaki",
       "image": "https://www.edamam.com/web-img/827/8275cc33e9f0f4314617d5a356900aa7.jpg",
-      "url": "http://norecipes.com/blog/2009/07/16/chicken-teriyaki-recipe/",        
+      "url": "http://norecipes.com/blog/2009/07/16/chicken-teriyaki-recipe/",
       "ingredients": [
-          "1/2 cup water",
-          "2 tablespoons Japanese soy sauce",
-          "2 tablespoons dark brown sugar",
-          "2 tablespoons mirin",
-          "4-6 skin-on filleted (boneless) chicken thighs",
-          "2 tablespoons mild flavored honey (or maltose)",
-          "2 tablespoons dark soy sauce",
-          "2 tablespoons sake"
+        "1/2 cup water",
+        "2 tablespoons Japanese soy sauce",
+        "2 tablespoons dark brown sugar",
+        "2 tablespoons mirin",
+        "4-6 skin-on filleted (boneless) chicken thighs",
+        "2 tablespoons mild flavored honey (or maltose)",
+        "2 tablespoons dark soy sauce",
+        "2 tablespoons sake"
       ],
       "directions": "Combine the water, soy sauce, brown sugar and mirin in large ziploc bag and add the chicken thighs. Press out as much air as you can and seal the bag. Let this sit in the fridge for at least an hour. To make the teriyaki sauce, just add the honey, soy sauce, mirin and sake to a small sauce pan and boil over medium heat until the sauce is glossy and slightly viscous (it won't get quite as thick as the jarred types). It should take on a caramelized taste but be careful not to burn it. When you're ready to grill the chicken, turn the broiler on and move the oven rack up to the upper position. Put a wire rack on a baking sheet (I use the rack out of my toaster oven), and put the chicken thighs skin side down onto the rack (the idea is to keep the meat elevated off the pan). Grill until brown then flip so the skin side faces up. Baste the skin side with teriyaki sauce and continue to broil until the skin is golden brown with just a few charred spots. Give the chicken one final baste with the teriyaki sauce and serve."
-  }
-]
+    },
+    {
+      "id": 6,
+      "title": "Roast Beef",
+      "image": "https://www.edamam.com/web-img/98a/98aa5d5cc0d88b28c2b9221a099b1a14.jpg",
+      "url": "http://www.saveur.com/article/Recipes/Roast-Beef",
+      "ingredients": [
+          "8-lb. shell roast of beef",
+          "Coarse salt and freshly ground black pepper"
+      ],
+      "directions":"Preheat oven to 450°. Season beef (on the bone) with salt and pepper. Place fat side up in a roasting pan and cook for about 1 hour and 15 minutes, until internal temperature reaches 120° (beef will continue to cook to medium-rare as it rests). Transfer to a platter, reserving drippings for Yorkshire Pudding. Let beef rest for 30 minutes; serve with Horseradish Sauce."
+    },
+{
+      "id": 7,
+      "title": "Garlic Beef",
+      "image": "https://www.edamam.com/web-img/faa/faa29f79b2c46528184ec0710371b621.jpg",
+      "url": "http://www.bbcgoodfood.com/recipes/5535/",
+      "ingredients": [
+          "1.0 tbsp black peppercorns",
+          "6 garlic cloves",
+          "4.0 tbsp red wine vinegar",
+          "600.0g piece well-trimmed beef skirt"
+      ],
+      "directions": "In a pestle and mortar, crush peppercorns and garlic with a pinch of salt until you have a smooth-ish paste, then stir in the vinegar. Sit the beef in a non-metallic dish, then rub all over with the paste. Leave in the fridge for a few hrs, but no longer. To cook, place a griddle pan over a very hot heat. Rub the marinade off the meat, then season with a little more salt. Cook meat until charred on each side – about 5 mins on each side for rare; if the cut is very thick, you may want to roast it in a hot oven for 5 mins after searing. Lift onto a chopping board, then rest for 5 mins before carving into slices and serving with chips, if you like."
+},
+{
+      "id": 8,
+      "title": "Beef Brisket",
+      "image": "https://www.edamam.com/web-img/deb/debce0693c8d8a6988af80e1f94e4c4c.jpg",
+      "url": "http://simplyrecipes.com/recipes/beef_brisket/",
+      "ingredients": [
+          "3 to 4 lbs of a brisket cut of beef",
+          "3/4 cup barbeque sauce",
+          "1/4 cup soy sauce",
+          "1 cup of water"
+      ],
+      "directions": "1 Preheat oven to 300ºF.2 Make the sauce: In a bowl, mix together the barbecue sauce, soy sauce, and water. 3 Roast the brisket in the oven (2 methods): Foil method: Place the brisket roast on a large piece of aluminum foil. Spread the BBQ sauce mixture generously over meat. Wrap the brisket in aluminum foil and place it in a roasting pan.    Bake for 3 hours for a 3 pound roast and 1 more hour for every additional pound of meat."
+    },  
+{
+      "id": 9,
+      "title": "Beef Tacos",
+      "image": "https://www.edamam.com/web-img/219/219b9268b0f84eecf0cab133498b7ef3.jpg",    
+      "url": "http://norecipes.com/blog/2009/05/28/beef-tacos-recipe/",
+      "ingredients": [
+          "1/2 medium onion chopped",
+          "2 cloves garlic minced",
+          "1 lbs sliced or lean ground beef",
+          "2 Tbs chili powder",
+          "1 tsp kosher salt",
+          "1/2 tsp sugar",
+          "12 corn tortillas",
+          "1 recipe salsa verde",
+          "cilantro",
+          "lime wedges"
+      ],
+      "directions": "Heat a pan until hot, and then add a splash of oil along with the onions and garlic. Fry until the onions are just turning translucent, then add the beef, chili powder, salt and sugar. Stir fry until the beef is cooked and there's no liquid left at the bottom of the pan. Heat the tortillas and serve with the beef, salsa verde, cilantro and lime wedges."
+        },          
+{
+      "id": 10,
+      "title": "Beef Kreplach",
+      "image": "https://www.edamam.com/web-img/318/3187f6fd226d5b4ed2e5a4bdb6b71167.jpg", 
+      "url": "http://ruhlman.com/2012/02/kreplach-dumplings/",
+      "ingredients": [
+          "2 cups flour, plus more for dusting",
+          "4 eggs",
+          "1/4 cup water",
+          "1 pound cooked beef, diced",
+          "1/2 onion, diced and sauteed till transluscent, cooled",
+          "salt to taste",
+          "1 teaspoon black pepper",
+          "2 teaspoons sweet Hungarian paprika",
+          "oil for pan frying"
+      ],
+      "directions": "Make the dough by combining the flour, 2 eggs and water in the bowl of a standing mixer and mixing till the dough is baby’s-bottom smooth. You may have to finish it by hand (or do it start to finish by hand). Wrap in plastic and set aside. Make the filling by combining the meat, 1 egg, the onion, salt, black pepper, and paprika in the bowl of a food processor and pulse till it’s pureed. (You can also do this by passing the mixture through a meat grinder then stirring in the egg; if you want the onions to remain chunky, fold them into the mixture after the meat is puréed or ground.) Roll out the dough to less than 1/8th inch thick. Cut 3-inch squares as pictured above. Put a teaspoon of the meat in the center of each.  Mix the last egg with a little water and brush it on adjacent sides of each square, then enclose the filling in a triangular shape, sealing dry edge to egg-washed edge. Boil the dumplings in salted water till the pasta is cooked, 3 or 4 minutes.  Drain and chill beneath running water or in the cooking pot. When ready to cook, heat a large pan with enough oil to coat the bottom by about an eighth of an inch over medium high heat and sauté the dumplings till they’re golden brown and delicious as they are in the lead photo."
+    },    
+{
+      "id": 11,
+      "title": "Beef Tenderloin",
+      "image": "https://www.edamam.com/web-img/e30/e30b4eddc7b3c0cfa19aa81662fcf68a.jpg",
+      "source": "Martha Stewart",
+      "url": "http://www.marthastewart.com/344408/beef-tenderloin",
+      "ingredients": [
+          "2 1/2 pounds center-cut beef tenderloin, tied by your butcher",
+          "1 tablespoon olive oil",
+          "Coarse salt and ground pepper",
+          "Horseradish cream, optional",
+          "Bearnaise sauce, optional"
+      ],
+      "directions": "1. Preheat oven to 425 degrees. In a 12-inch cast-iron skillet or a roasting pan, rub beef tenderloin with oil. Generously season with at least 2 teaspoons each salt and pepper. 2. Roast, turning halfway through, until an instant-read thermometer inserted into thickest part registers 125 degrees to 135 degrees for rare, 135 degrees to 140 degrees for medium, and 150 degrees for well done, 30 to 45 minutes, depending on desired doneness. 3. Remove from oven; cover loosely with foil; let rest 10 minutes. Remove twine; thinly slice beef. Serve with horseradish cream and bearnaise sauce, as desired."
+    }  
+  ]
 }
