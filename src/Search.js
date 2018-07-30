@@ -24,8 +24,8 @@ export default class Search extends Component {
             <form className="search-form" onSubmit={this.props.handleSumbit}>
                 <label className="is-hidden" htmlFor="search">Find Recipes</label>
                 <input type="search"
-                        onChange={this.props.onSearchChange}
                         name="search"
+                        onSearch={this.props.onSearchChange}
                         ref={(input) => this.onHand = input}
                         placeholder="Search..."/>
                 <button type="submit" id="submit" className="search-button">Submit</button>
