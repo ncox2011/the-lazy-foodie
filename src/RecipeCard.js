@@ -1,7 +1,8 @@
 import React from 'react'
-import {Card, CardHeader, CardImage, CardContent, Media, Image, MediaContent, Title, Subtitle, Content} from 'bloomer'
+import {Card, CardHeader, CardImage, CardContent, Media, Icon, Image, MediaContent, Title, Subtitle, Content} from 'bloomer'
 import './index.css'
 import 'bulma/css/bulma.css';
+
 
 export default props => {
     let recipe = {}
@@ -32,5 +33,8 @@ return (
             <br/>
         </Content>
     </CardContent>
+    <button>Favorite</button>
+    <button>Delete</button>
+    {/* <Icon isSize="medium" className="fas fa-heart"></Icon> */}
 </Card>
 )}

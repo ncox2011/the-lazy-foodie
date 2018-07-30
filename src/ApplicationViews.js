@@ -17,8 +17,14 @@ export default class ApplicationViews extends Component {
             <React.Fragment>
                 <Route exact path="/" component={Welcome} />
                 <Route exact path="/Login" component={Login} />
-                <Route exact path="/Register" compoent={Register} />
-                <Route exact path="/RecipeList" component={RecipeList} />
+                <Route exact path="/Register" component={Register} />
+                <Route exact path="/RecipeList" render={props => {
+                    if (this.isAuthenticated()) {
+                        return <RecipeList />;
+                    } else {
+                        return <Login/>
+                    }
+                }}/>
             </React.Fragment>
         )
     }

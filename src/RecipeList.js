@@ -77,6 +77,20 @@ export default class RecipeList extends Component {
         // e.currentTarget.resethandleSumbit()
     }
 
+    deleteFromFav = (id) => {
+        APIHandler.deleteData("favorites", id)
+        .then(() => {
+            return APIHandler.getData("event")
+        })
+    }
+
+    addToFav = e => {
+        APIHandler.addData("favorites", recipes)
+        .then(() => {
+            this.props.refresh()
+        })
+    }
+
     componentWillMount() {
         this.refresh()
         console.log(this.state)

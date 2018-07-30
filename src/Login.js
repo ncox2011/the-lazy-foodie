@@ -16,42 +16,38 @@ export default class Login extends Component {
     }
 
     handleLogin = event => {
-
         APIHandler.getData(`users?email=${this.state.email}`)
-        .then(user => {
-            if (user.length > 0 && this.state.password == user[0].password) {
-                this.setState({ userId: user[0].id});
-            } else {
-                alert(
-                    "Looks like you may have entered the wrong login information"
-                )
-            }
-        })
-        .then(() => {
-            const checkbox = document.getElementById("checkbox");
+      .then(user => {
+        // console.log(user[0].password);
+        if (user.length > 0 && this.state.password == user[0].password) {
+          this.setState({ userId: user[0].id });
+        } else {
+          alert(
+            "We're Sorry, it looks like you may have mistyped your email address or password."
+          );
+        }
+      })
+        const checkbox = document.getElementById("checkbox");
+        console.log("handlelogin fires")
             if (checkbox.checked) {
-              if (this.state.userId) {
               localStorage.setItem(
                 "userInfo",
                 JSON.stringify({
                   email: this.state.email,
                   password: this.state.password,
-                  userId: this.state.userId
                 })
               );
-            }} else {
-              if (this.state.userId) {
+
+        } else {
               sessionStorage.setItem(
                 "userInfo",
                 JSON.stringify({
                   email: this.state.email,
                   password: this.state.password,
-                  userId: this.state.userId
                 })
               );
-            }}
-          });
-      };
+        }
+          }
       render() {
         return (
             <form onSubmit={this.handleLogin}>
@@ -70,12 +66,12 @@ export default class Login extends Component {
                  onChange = {this.handleFieldChange}/>
                  <label> Remember Me</label>
                  <input type="checkbox" id="checkbox" />
-                 <button 
-                 isColor='primary' 
+                 <button  
                  type="submit">
-                 <Link to={{
-                pathname: "/RecipeList"}}>Submit
-                </Link>
+                 {/* <Link to={{
+                pathname: "/RecipeList"}}> */}
+                Submit
+                {/* </Link> */}
                 </button>
             </form>
         )
