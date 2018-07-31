@@ -20,13 +20,13 @@ return (
             <MediaContent>
                 <Title isSize={6}>{props.recipe.title}</Title>
                 <h3>Ingredients</h3>
-                {/* <ul className="ingredientList">
+                <ul className="ingredientList">
                     {
                         props.recipe.ingredients.map(ingredient => {
                     return <li key={ingredient}>{ingredient}
                     </li>})
                 }
-                </ul> */}
+                </ul>
             </MediaContent>
         </Media>
         <Content>
@@ -34,6 +34,6 @@ return (
             <br/>
         </Content>
     </CardContent>
-    <button>Delete</button>
+    <button onClick={() => props.deleteFromFav(props.recipe.id)}>Delete</button>
 </Card>
 )}

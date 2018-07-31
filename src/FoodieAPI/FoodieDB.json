@@ -10,11 +10,6 @@
   "friends": [],
   "favorites": [
     {
-      "userId": null,
-      "recipeId": 1,
-      "id": 1
-    },
-    {
       "userId": 3,
       "recipeId": 1,
       "id": 2

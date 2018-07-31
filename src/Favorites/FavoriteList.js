@@ -16,37 +16,19 @@ export default class RecipeList extends Component {
     refresh = () => {
         APIHandler.getData("favorites?_expand=recipe")
         .then(recipes => {
+            console.log(recipes)
             this.setState({ recipes: recipes})
         })
     }
 
-    // findRecipe = (searchText) => {
-    //     APIHandler.getData(`favorites?_expand=recipeq=${this.state.searchText}`)
-    //     .then(recipes => {
-    //         console.log("this is the find recipe recipe", recipes)
-    //         this.setState({recipes: recipes})
-    //     })
-    // }
-
-    // onSearchChange = event => {
-    //     this.setState({ searchText: event.target.value})
-    // }
-
-    handleSubmit = e => {
-        e.preventDefault();
-        // this.findRecipe()
-
-    }
 
     deleteFromFav = (id) => {
-        APIHandler.deleteData("favorites", id)
+        APIHandler.deleteData(id)
         .then(() => {
-            return APIHandler.getData("events")
+            return APIHandler.getData("favorites")
         })
     }
 
-
-   
 
     componentWillMount() {
         this.refresh()
@@ -57,17 +39,10 @@ export default class RecipeList extends Component {
         
         return (
             <React.Fragment>
-                <form className="search-form" onSubmit={this.handleSubmit}>
-                <label className="is-hidden" htmlFor="search">Find Recipes</label>
-                <input type="search"
-                        name="search"
-                        onChange={this.onSearchChange}
-                        placeholder="Search..."/>
-                <button type="submit" id="submit" className="search-button">Submit</button>
-            </form>
+            <title>Your Favorites</title>
                 {
                     this.state.recipes.map(recipe => 
-                    < FavoriteCard key={recipe.id} recipe={recipe} />
+                    < FavoriteCard key={recipe.id} recipe={recipe.recipe} deleteFromFav={this.deleteFromFav}/>
                     )
                 }
             </React.Fragment>
