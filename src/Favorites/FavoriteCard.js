@@ -1,6 +1,6 @@
 import React from 'react'
 import {Card, CardHeader, CardImage, CardContent, Media, Icon, Image, MediaContent, Title, Subtitle, Content} from 'bloomer'
-import './index.css'
+import '../index.css'
 import 'bulma/css/bulma.css';
 
 
@@ -20,13 +20,13 @@ return (
             <MediaContent>
                 <Title isSize={6}>{props.recipe.title}</Title>
                 <h3>Ingredients</h3>
-                <ul className="ingredientList">
+                {/* <ul className="ingredientList">
                     {
                         props.recipe.ingredients.map(ingredient => {
                     return <li key={ingredient}>{ingredient}
                     </li>})
                 }
-                </ul>
+                </ul> */}
             </MediaContent>
         </Media>
         <Content>
@@ -34,8 +34,6 @@ return (
             <br/>
         </Content>
     </CardContent>
-    <button onClick={() => props.addToFav((props.recipe.id),(props.userId))}>Favorite</button>
     <button>Delete</button>
-    {/* <Icon isSize="medium" className="fas fa-heart"></Icon> */}
 </Card>
 )}

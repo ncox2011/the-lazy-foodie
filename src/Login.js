@@ -6,7 +6,7 @@ import 'bulma/css/bulma.css';
 export default class Login extends Component {
     state = {
         email: "",
-        password: ""
+        password: "",
     };
 
     handleFieldChange = event => {
@@ -15,39 +15,33 @@ export default class Login extends Component {
         this.setState(stateToChange);
     }
 
-    handleLogin = event => {
+    handleLogin = () => {
         APIHandler.getData(`users?email=${this.state.email}`)
       .then(user => {
-        // console.log(user[0].password);
+        console.log("user",user);
         if (user.length > 0 && this.state.password == user[0].password) {
           this.setState({ userId: user[0].id });
+          const checkbox = document.getElementById("checkbox");
+          let loginObj = JSON.stringify({
+            email: this.state.email,
+            password: this.state.password,
+            userId: this.state.userId
+          })
+              if (checkbox.checked) {
+                localStorage.setItem("userInfo", loginObj);
+  
+          } else {
+                sessionStorage.setItem('userInfo', loginObj);
+  
+            }
         } else {
           alert(
             "We're Sorry, it looks like you may have mistyped your email address or password."
           );
         }
       })
-        const checkbox = document.getElementById("checkbox");
-        console.log("handlelogin fires")
-            if (checkbox.checked) {
-              localStorage.setItem(
-                "userInfo",
-                JSON.stringify({
-                  email: this.state.email,
-                  password: this.state.password,
-                })
-              );
-
-        } else {
-              sessionStorage.setItem(
-                "userInfo",
-                JSON.stringify({
-                  email: this.state.email,
-                  password: this.state.password,
-                })
-              );
+       
         }
-          }
       render() {
         return (
             <form onSubmit={this.handleLogin}>
