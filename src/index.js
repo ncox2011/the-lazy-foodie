@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom'
 import './index.css';
 import TheLazyFoodie from './TheLazyFoodie';
-import registerServiceWorker from './registerServiceWorker';
+// import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
     <Router>
@@ -12,4 +12,4 @@ ReactDOM.render(
         </React.Fragment>
     </Router>,
         document.getElementById('root'));
-registerServiceWorker();
+// registerServiceWorker();

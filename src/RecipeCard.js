@@ -7,6 +7,7 @@ import 'bulma/css/bulma.css';
 export default props => {
     let recipe = {}
 
+
 return (
 <Card>
     <CardHeader>
@@ -33,7 +34,7 @@ return (
             <br/>
         </Content>
     </CardContent>
-    <button>Favorite</button>
+    <button onClick={() => props.addToFav((props.recipe.id),(props.userId))}>Favorite</button>
     <button>Delete</button>
     {/* <Icon isSize="medium" className="fas fa-heart"></Icon> */}
 </Card>

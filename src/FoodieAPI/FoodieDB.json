@@ -1,43 +1,28 @@
 {
   "users": [
     {
-      "name": "",
-      "email": "",
-      "password": "",
-      "id": 1
-    },
-    {
-      "name": "",
-      "email": "",
-      "password": "",
-      "id": 2
-    },
-    {
       "name": "nc",
       "email": "nc@gmail.com",
       "password": "123",
       "id": 3
-    },
-    {
-      "name": "bob",
-      "email": "person@gmail.com",
-      "password": "1",
-      "id": 4
-    },
-    {
-      "name": "nathan",
-      "email": "nate@gmail.com",
-      "password": "1",
-      "id": 5
     }
   ],
   "friends": [],
   "favorites": [
     {
-      "id": 1,
+      "userId": null,
       "recipeId": 1,
-      "reviewId": 1,
-      "userId": 1
+      "id": 1
+    },
+    {
+      "userId": 3,
+      "recipeId": 1,
+      "id": 2
+    },
+    {
+      "userId": 3,
+      "recipeId": 4,
+      "id": 3
     }
   ],
   "reviews": [],
@@ -122,88 +107,88 @@
       "image": "https://www.edamam.com/web-img/98a/98aa5d5cc0d88b28c2b9221a099b1a14.jpg",
       "url": "http://www.saveur.com/article/Recipes/Roast-Beef",
       "ingredients": [
-          "8-lb. shell roast of beef",
-          "Coarse salt and freshly ground black pepper"
+        "8-lb. shell roast of beef",
+        "Coarse salt and freshly ground black pepper"
       ],
-      "directions":"Preheat oven to 450°. Season beef (on the bone) with salt and pepper. Place fat side up in a roasting pan and cook for about 1 hour and 15 minutes, until internal temperature reaches 120° (beef will continue to cook to medium-rare as it rests). Transfer to a platter, reserving drippings for Yorkshire Pudding. Let beef rest for 30 minutes; serve with Horseradish Sauce."
+      "directions": "Preheat oven to 450°. Season beef (on the bone) with salt and pepper. Place fat side up in a roasting pan and cook for about 1 hour and 15 minutes, until internal temperature reaches 120° (beef will continue to cook to medium-rare as it rests). Transfer to a platter, reserving drippings for Yorkshire Pudding. Let beef rest for 30 minutes; serve with Horseradish Sauce."
     },
-{
+    {
       "id": 7,
       "title": "Garlic Beef",
       "image": "https://www.edamam.com/web-img/faa/faa29f79b2c46528184ec0710371b621.jpg",
       "url": "http://www.bbcgoodfood.com/recipes/5535/",
       "ingredients": [
-          "1.0 tbsp black peppercorns",
-          "6 garlic cloves",
-          "4.0 tbsp red wine vinegar",
-          "600.0g piece well-trimmed beef skirt"
+        "1.0 tbsp black peppercorns",
+        "6 garlic cloves",
+        "4.0 tbsp red wine vinegar",
+        "600.0g piece well-trimmed beef skirt"
       ],
       "directions": "In a pestle and mortar, crush peppercorns and garlic with a pinch of salt until you have a smooth-ish paste, then stir in the vinegar. Sit the beef in a non-metallic dish, then rub all over with the paste. Leave in the fridge for a few hrs, but no longer. To cook, place a griddle pan over a very hot heat. Rub the marinade off the meat, then season with a little more salt. Cook meat until charred on each side – about 5 mins on each side for rare; if the cut is very thick, you may want to roast it in a hot oven for 5 mins after searing. Lift onto a chopping board, then rest for 5 mins before carving into slices and serving with chips, if you like."
-},
-{
+    },
+    {
       "id": 8,
       "title": "Beef Brisket",
       "image": "https://www.edamam.com/web-img/deb/debce0693c8d8a6988af80e1f94e4c4c.jpg",
       "url": "http://simplyrecipes.com/recipes/beef_brisket/",
       "ingredients": [
-          "3 to 4 lbs of a brisket cut of beef",
-          "3/4 cup barbeque sauce",
-          "1/4 cup soy sauce",
-          "1 cup of water"
+        "3 to 4 lbs of a brisket cut of beef",
+        "3/4 cup barbeque sauce",
+        "1/4 cup soy sauce",
+        "1 cup of water"
       ],
       "directions": "1 Preheat oven to 300ºF.2 Make the sauce: In a bowl, mix together the barbecue sauce, soy sauce, and water. 3 Roast the brisket in the oven (2 methods): Foil method: Place the brisket roast on a large piece of aluminum foil. Spread the BBQ sauce mixture generously over meat. Wrap the brisket in aluminum foil and place it in a roasting pan.    Bake for 3 hours for a 3 pound roast and 1 more hour for every additional pound of meat."
-    },  
-{
+    },
+    {
       "id": 9,
       "title": "Beef Tacos",
-      "image": "https://www.edamam.com/web-img/219/219b9268b0f84eecf0cab133498b7ef3.jpg",    
+      "image": "https://www.edamam.com/web-img/219/219b9268b0f84eecf0cab133498b7ef3.jpg",
       "url": "http://norecipes.com/blog/2009/05/28/beef-tacos-recipe/",
       "ingredients": [
-          "1/2 medium onion chopped",
-          "2 cloves garlic minced",
-          "1 lbs sliced or lean ground beef",
-          "2 Tbs chili powder",
-          "1 tsp kosher salt",
-          "1/2 tsp sugar",
-          "12 corn tortillas",
-          "1 recipe salsa verde",
-          "cilantro",
-          "lime wedges"
+        "1/2 medium onion chopped",
+        "2 cloves garlic minced",
+        "1 lbs sliced or lean ground beef",
+        "2 Tbs chili powder",
+        "1 tsp kosher salt",
+        "1/2 tsp sugar",
+        "12 corn tortillas",
+        "1 recipe salsa verde",
+        "cilantro",
+        "lime wedges"
       ],
       "directions": "Heat a pan until hot, and then add a splash of oil along with the onions and garlic. Fry until the onions are just turning translucent, then add the beef, chili powder, salt and sugar. Stir fry until the beef is cooked and there's no liquid left at the bottom of the pan. Heat the tortillas and serve with the beef, salsa verde, cilantro and lime wedges."
-        },          
-{
+    },
+    {
       "id": 10,
       "title": "Beef Kreplach",
-      "image": "https://www.edamam.com/web-img/318/3187f6fd226d5b4ed2e5a4bdb6b71167.jpg", 
+      "image": "https://www.edamam.com/web-img/318/3187f6fd226d5b4ed2e5a4bdb6b71167.jpg",
       "url": "http://ruhlman.com/2012/02/kreplach-dumplings/",
       "ingredients": [
-          "2 cups flour, plus more for dusting",
-          "4 eggs",
-          "1/4 cup water",
-          "1 pound cooked beef, diced",
-          "1/2 onion, diced and sauteed till transluscent, cooled",
-          "salt to taste",
-          "1 teaspoon black pepper",
-          "2 teaspoons sweet Hungarian paprika",
-          "oil for pan frying"
+        "2 cups flour, plus more for dusting",
+        "4 eggs",
+        "1/4 cup water",
+        "1 pound cooked beef, diced",
+        "1/2 onion, diced and sauteed till transluscent, cooled",
+        "salt to taste",
+        "1 teaspoon black pepper",
+        "2 teaspoons sweet Hungarian paprika",
+        "oil for pan frying"
       ],
       "directions": "Make the dough by combining the flour, 2 eggs and water in the bowl of a standing mixer and mixing till the dough is baby’s-bottom smooth. You may have to finish it by hand (or do it start to finish by hand). Wrap in plastic and set aside. Make the filling by combining the meat, 1 egg, the onion, salt, black pepper, and paprika in the bowl of a food processor and pulse till it’s pureed. (You can also do this by passing the mixture through a meat grinder then stirring in the egg; if you want the onions to remain chunky, fold them into the mixture after the meat is puréed or ground.) Roll out the dough to less than 1/8th inch thick. Cut 3-inch squares as pictured above. Put a teaspoon of the meat in the center of each.  Mix the last egg with a little water and brush it on adjacent sides of each square, then enclose the filling in a triangular shape, sealing dry edge to egg-washed edge. Boil the dumplings in salted water till the pasta is cooked, 3 or 4 minutes.  Drain and chill beneath running water or in the cooking pot. When ready to cook, heat a large pan with enough oil to coat the bottom by about an eighth of an inch over medium high heat and sauté the dumplings till they’re golden brown and delicious as they are in the lead photo."
-    },    
-{
+    },
+    {
       "id": 11,
       "title": "Beef Tenderloin",
       "image": "https://www.edamam.com/web-img/e30/e30b4eddc7b3c0cfa19aa81662fcf68a.jpg",
       "source": "Martha Stewart",
       "url": "http://www.marthastewart.com/344408/beef-tenderloin",
       "ingredients": [
-          "2 1/2 pounds center-cut beef tenderloin, tied by your butcher",
-          "1 tablespoon olive oil",
-          "Coarse salt and ground pepper",
-          "Horseradish cream, optional",
-          "Bearnaise sauce, optional"
+        "2 1/2 pounds center-cut beef tenderloin, tied by your butcher",
+        "1 tablespoon olive oil",
+        "Coarse salt and ground pepper",
+        "Horseradish cream, optional",
+        "Bearnaise sauce, optional"
       ],
       "directions": "1. Preheat oven to 425 degrees. In a 12-inch cast-iron skillet or a roasting pan, rub beef tenderloin with oil. Generously season with at least 2 teaspoons each salt and pepper. 2. Roast, turning halfway through, until an instant-read thermometer inserted into thickest part registers 125 degrees to 135 degrees for rare, 135 degrees to 140 degrees for medium, and 150 degrees for well done, 30 to 45 minutes, depending on desired doneness. 3. Remove from oven; cover loosely with foil; let rest 10 minutes. Remove twine; thinly slice beef. Serve with horseradish cream and bearnaise sauce, as desired."
-    }  
+    }
   ]
 }
