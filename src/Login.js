@@ -62,10 +62,7 @@ export default class Login extends Component {
                  <input type="checkbox" id="checkbox" />
                  <button  
                  type="submit">
-                 {/* <Link to={{
-                pathname: "/RecipeList"}}> */}
                 Submit
-                {/* </Link> */}
                 </button>
             </form>
         )

@@ -2,6 +2,7 @@ import React from 'react'
 import {Card, CardHeader, CardImage, CardContent, Media, Icon, Image, MediaContent, Title, Subtitle, Content} from 'bloomer'
 import '../index.css'
 import 'bulma/css/bulma.css';
+import Reviews from '../Review/Reviews'
 
 
 export default props => {
@@ -9,6 +10,7 @@ export default props => {
 
 
 return (
+    <React.Fragment>
 <Card>
     <CardHeader>
     </CardHeader>
@@ -35,6 +37,8 @@ return (
         </Content>
     </CardContent>
     <button onClick={() => props.deleteFromFav(props.favorite.id)}>Delete</button>
-    <button>Review</button>
+    <button>Reviews</button>
 </Card>
+<Reviews/>
+</React.Fragment>
 )}
