@@ -16,19 +16,19 @@
   "friends": [],
   "favorites": [
     {
-      "userId": 3,
-      "recipeId": 10,
-      "id": 8
-    },
-    {
       "userId": 4,
-      "recipeId": 1,
+      "recipeId": 2,
       "id": 10
     },
     {
       "userId": 3,
-      "recipeId": 2,
-      "id": 11
+      "recipeId": 4,
+      "id": 14
+    },
+    {
+      "userId": 3,
+      "recipeId": 1,
+      "id": 15
     }
   ],
   "reviews": [],
