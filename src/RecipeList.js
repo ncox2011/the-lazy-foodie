@@ -40,12 +40,6 @@ export default class RecipeList extends Component {
 
     }
 
-    deleteFromFav = (id) => {
-        APIHandler.deleteData("favorites", id)
-        .then(() => {
-            return APIHandler.getData("events")
-        })
-    }
 
 
     addToFav = (recipeId, userId) => {

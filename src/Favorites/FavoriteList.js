@@ -3,6 +3,7 @@ import FavoriteCard from './FavoriteCard'
 import APIHandler from '../APIHandler'
 
 
+
 export default class RecipeList extends Component {
 
     constructor() {
@@ -41,10 +42,10 @@ export default class RecipeList extends Component {
   };
 
     refresh = () => {
-        APIHandler.getData("favorites?_expand=recipe")
-        .then(favorites => {
+        APIHandler.getData("reviews")
+        .then(reviews => {
             this.setState({ 
-                favorites: favorites
+                reviews: reviews
             })
         })
     }
@@ -76,7 +77,37 @@ export default class RecipeList extends Component {
   }
 };
 
+handleFieldChange = (event) => {
+    const stateToChange = {}
+    stateToChange[event.target.id] = event.target.value
+    this.setState(stateToChange)
+}
 
+handleNewReview = (e) => {
+        //Stops default action of form reloading
+        e.preventDefault()
+
+        let reviewInput = document.getElementById("reviewText").value
+        let signedInUser = JSON.parse(localStorage.getItem("userInfo"));
+        if (signedInUser === null) {
+            signedInUser = JSON.parse(sessionStorage.getItem("userInfo"));
+            signedInUser = signedInUser.userId;
+        } else {
+            signedInUser = signedInUser.userId;
+        }
+
+
+        const newReview = {
+            userId: signedInUser,
+            message: reviewInput
+        }
+
+        APIHandler.addData("reviews", newReview)
+            .then(() => {
+                this.props.refresh()
+            })
+
+    }
 
 
     componentDidMount() {
@@ -90,11 +121,13 @@ export default class RecipeList extends Component {
         return (
             <React.Fragment>
             <title>Your Favorites</title>
+                <div>
                 {
                     this.state.favorites.map(favorite => 
                     < FavoriteCard key={favorite.id} favorite={favorite} deleteFromFav={this.deleteFromFav}/>
                     )
                 }
+                </div>
             </React.Fragment>
         )
     }
