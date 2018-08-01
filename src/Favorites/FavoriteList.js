@@ -13,6 +13,33 @@ export default class RecipeList extends Component {
     }; 
  }
 
+ getUserFavorites = () => {
+    let sessionUser = JSON.parse(sessionStorage.getItem("userInfo")); // gets sessionStorage
+    let localUser = JSON.parse(localStorage.getItem("userInfo")); // gets localStorage
+
+    if (sessionUser !== null) { // if sessionStorage is populated with data (ie. user has logged in with sessionStorage)
+    //   console.log(APIHandler.getFavUserId(sessionUser.userId))
+    //   .then((userId) => {
+      return APIHandler.getData(`favorites?userId=${sessionUser.userId}&_expand=recipe`)
+   
+      .then(userFavorites => {
+          console.log(userFavorites)
+          this.setState({ 
+              favorites: userFavorites
+          })
+      })
+
+    } else if (localUser !== null) { // if localStorage is populated with data (ie. user has logged in with localStorage)
+          APIHandler.getData(`favorites?userId=${localUser.userId}&_expand=recipe`)
+
+      .then(userFavorites => {
+          this.setState({ 
+              favorites: userFavorites
+          })
+      })
+    }
+  };
+
     refresh = () => {
         APIHandler.getData("favorites?_expand=recipe")
         .then(favorites => {
@@ -36,7 +63,8 @@ export default class RecipeList extends Component {
 
 
     componentWillMount() {
-        this.refresh()
+        // this.refresh()
+        this.getUserFavorites()
         
     }
 

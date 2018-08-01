@@ -34,9 +34,6 @@ export default class ApplicationViews extends Component {
                         return <Login/>
                     }
                 }}/>
-                <Route path="Favorites/:favId" render={props => {
-                    return <FavoriteCard/>
-                }}/>
             </React.Fragment>
         )
     }

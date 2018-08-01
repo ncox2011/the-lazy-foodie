@@ -24,5 +24,10 @@ export default class APIHandler {
             },
             body: JSON.stringify(body)
         });
-    }
+    };
+    static getFavUserId = userNumber => {
+        return fetch(
+          `http://localhost:5002/favorites?userId=${userNumber}`
+        ).then(e => e.json());
+      };
 }
