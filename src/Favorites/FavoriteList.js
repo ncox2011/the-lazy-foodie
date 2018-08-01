@@ -8,45 +8,32 @@ export default class RecipeList extends Component {
     constructor() {
         super();
         this.state = {
-        recipes: [],
+        favorites: [],
         searchText: ''
     }; 
  }
 
     refresh = () => {
         APIHandler.getData("favorites?_expand=recipe")
-        .then(recipes => {
-            this.setState({ recipes: recipes})
+        .then(favorites => {
+            this.setState({ 
+                favorites: favorites
+            })
         })
     }
 
-    // findRecipe = (searchText) => {
-    //     APIHandler.getData(`favorites?_expand=recipeq=${this.state.searchText}`)
-    //     .then(recipes => {
-    //         console.log("this is the find recipe recipe", recipes)
-    //         this.setState({recipes: recipes})
-    //     })
-    // }
 
-    // onSearchChange = event => {
-    //     this.setState({ searchText: event.target.value})
-    // }
-
-    handleSubmit = e => {
-        e.preventDefault();
-        // this.findRecipe()
-
-    }
-
-    deleteFromFav = (id) => {
-        APIHandler.deleteData("favorites", id)
+    deleteFromFav = (favId) => {
+        APIHandler.deleteData("favorites", favId)
         .then(() => {
-            return APIHandler.getData("events")
+            return APIHandler.getData("favorites?_expand=recipe")
+            }).then(allFavorites => {
+                this.setState({
+                    favorites: allFavorites
+            })
         })
     }
 
-
-   
 
     componentWillMount() {
         this.refresh()
@@ -57,17 +44,10 @@ export default class RecipeList extends Component {
         
         return (
             <React.Fragment>
-                <form className="search-form" onSubmit={this.handleSubmit}>
-                <label className="is-hidden" htmlFor="search">Find Recipes</label>
-                <input type="search"
-                        name="search"
-                        onChange={this.onSearchChange}
-                        placeholder="Search..."/>
-                <button type="submit" id="submit" className="search-button">Submit</button>
-            </form>
+            <title>Your Favorites</title>
                 {
-                    this.state.recipes.map(recipe => 
-                    < FavoriteCard key={recipe.id} recipe={recipe} />
+                    this.state.favorites.map(favorite => 
+                    < FavoriteCard key={favorite.id} favorite={favorite} deleteFromFav={this.deleteFromFav}/>
                     )
                 }
             </React.Fragment>
