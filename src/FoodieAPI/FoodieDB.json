@@ -11,13 +11,8 @@
   "favorites": [
     {
       "userId": 3,
-      "recipeId": 1,
-      "id": 2
-    },
-    {
-      "userId": 3,
-      "recipeId": 4,
-      "id": 3
+      "recipeId": 10,
+      "id": 8
     }
   ],
   "reviews": [],

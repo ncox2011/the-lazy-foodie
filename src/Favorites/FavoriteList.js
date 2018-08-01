@@ -8,24 +8,29 @@ export default class RecipeList extends Component {
     constructor() {
         super();
         this.state = {
-        recipes: [],
+        favorites: [],
         searchText: ''
     }; 
  }
 
     refresh = () => {
         APIHandler.getData("favorites?_expand=recipe")
-        .then(recipes => {
-            console.log(recipes)
-            this.setState({ recipes: recipes})
+        .then(favorites => {
+            this.setState({ 
+                favorites: favorites
+            })
         })
     }
 
 
-    deleteFromFav = (id) => {
-        APIHandler.deleteData(id)
+    deleteFromFav = (favId) => {
+        APIHandler.deleteData("favorites", favId)
         .then(() => {
-            return APIHandler.getData("favorites")
+            return APIHandler.getData("favorites?_expand=recipe")
+            }).then(allFavorites => {
+                this.setState({
+                    favorites: allFavorites
+            })
         })
     }
 
@@ -41,8 +46,8 @@ export default class RecipeList extends Component {
             <React.Fragment>
             <title>Your Favorites</title>
                 {
-                    this.state.recipes.map(recipe => 
-                    < FavoriteCard key={recipe.id} recipe={recipe.recipe} deleteFromFav={this.deleteFromFav}/>
+                    this.state.favorites.map(favorite => 
+                    < FavoriteCard key={favorite.id} favorite={favorite} deleteFromFav={this.deleteFromFav}/>
                     )
                 }
             </React.Fragment>

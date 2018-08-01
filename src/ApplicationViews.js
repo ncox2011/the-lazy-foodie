@@ -5,6 +5,7 @@ import Register from './Register'
 import Welcome from './Welcome'
 import RecipeList from './RecipeList'
 import Favorites from './Favorites/FavoriteList'
+import FavoriteCard from './Favorites/FavoriteCard'
 
 
 export default class ApplicationViews extends Component {
@@ -32,6 +33,9 @@ export default class ApplicationViews extends Component {
                     } else {
                         return <Login/>
                     }
+                }}/>
+                <Route path="Favorites/:favId" render={props => {
+                    return <FavoriteCard/>
                 }}/>
             </React.Fragment>
         )

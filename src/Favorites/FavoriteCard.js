@@ -5,7 +5,7 @@ import 'bulma/css/bulma.css';
 
 
 export default props => {
-    let recipe = {}
+    let favorite = {}
 
 
 return (
@@ -13,16 +13,16 @@ return (
     <CardHeader>
     </CardHeader>
     <CardImage>
-    <img className="recipeImage" src={props.recipe.image}/>
+    <img className="recipeImage" src={props.favorite.recipe.image}/>
     </CardImage>
     <CardContent>
         <Media>
             <MediaContent>
-                <Title isSize={6}>{props.recipe.title}</Title>
+                <Title isSize={6}>{props.favorite.recipe.title}</Title>
                 <h3>Ingredients</h3>
                 <ul className="ingredientList">
                     {
-                        props.recipe.ingredients.map(ingredient => {
+                        props.favorite.recipe.ingredients.map(ingredient => {
                     return <li key={ingredient}>{ingredient}
                     </li>})
                 }
@@ -30,10 +30,11 @@ return (
             </MediaContent>
         </Media>
         <Content>
-            {props.recipe.directions}
+            {props.favorite.recipe.directions}
             <br/>
         </Content>
     </CardContent>
-    <button onClick={() => props.deleteFromFav(props.recipe.id)}>Delete</button>
+    <button onClick={() => props.deleteFromFav(props.favorite.id)}>Delete</button>
+    <button>Review</button>
 </Card>
 )}
