@@ -4,7 +4,7 @@ export default class APIHandler {
     };
     static reviewRecipe = (section, id, body) => {
         return fetch(`http://localhost:5002/${section}/${id}`, {
-            method: "PUT",
+            method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
             },

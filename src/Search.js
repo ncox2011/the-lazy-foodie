@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 // import { SearchBar } from 'react'
-import APIHandler from './APIHandler'
-import RecipeCard from './RecipeCard'
+
 
 
 export default class Search extends Component {

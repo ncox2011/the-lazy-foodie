@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import APIHandler from './APIHandler'
-import { Redirect, Link } from 'react-router-dom'
+// import { Redirect, Link } from 'react-router-dom'
 import 'bulma/css/bulma.css';
 
 export default class Login extends Component {
@@ -19,7 +19,7 @@ export default class Login extends Component {
         APIHandler.getData(`users?email=${this.state.email}`)
       .then(user => {
         console.log("user",user);
-        if (user.length > 0 && this.state.password == user[0].password) {
+        if (user.length > 0 && this.state.password === user[0].password) {
           this.setState({ userId: user[0].id });
           const checkbox = document.getElementById("checkbox");
           let loginObj = JSON.stringify({

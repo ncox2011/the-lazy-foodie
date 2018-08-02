@@ -5,7 +5,7 @@ import Register from './Register'
 import Welcome from './Welcome'
 import RecipeList from './RecipeList'
 import Favorites from './Favorites/FavoriteList'
-import FavoriteCard from './Favorites/FavoriteCard'
+// import FavoriteCard from './Favorites/FavoriteCard'
 
 
 export default class ApplicationViews extends Component {
