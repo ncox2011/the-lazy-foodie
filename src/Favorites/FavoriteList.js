@@ -4,7 +4,7 @@ import APIHandler from '../APIHandler'
 
 
 
-export default class RecipeList extends Component {
+export default class FavoriteList extends Component {
 
     constructor() {
         super();
@@ -41,14 +41,14 @@ export default class RecipeList extends Component {
     }
   };
 
-    refresh = () => {
-        APIHandler.getData("reviews")
-        .then(reviews => {
-            this.setState({ 
-                reviews: reviews
-            })
-        })
-    }
+    // refresh = () => {
+    //     APIHandler.getData("reviews")
+    //     .then(reviews => {
+    //         this.setState({ 
+    //             reviews: reviews
+    //         })
+    //     })
+    // }
 
 
     deleteFromFav = (favId) => {
@@ -77,17 +77,23 @@ export default class RecipeList extends Component {
   }
 };
 
-handleFieldChange = (event) => {
+handleReviewFieldChange = (event) => {
     const stateToChange = {}
     stateToChange[event.target.id] = event.target.value
     this.setState(stateToChange)
 }
 
-handleNewReview = (e) => {
+currentFavId = (id) => {
+    console.log("currentfavid function called")
+    this.setState({
+        currentFavId: id
+    })
+}
+
+handleReview = (e) => {
         //Stops default action of form reloading
         e.preventDefault()
-
-        let reviewInput = document.getElementById("reviewText").value
+        
         let signedInUser = JSON.parse(localStorage.getItem("userInfo"));
         if (signedInUser === null) {
             signedInUser = JSON.parse(sessionStorage.getItem("userInfo"));
@@ -95,20 +101,22 @@ handleNewReview = (e) => {
         } else {
             signedInUser = signedInUser.userId;
         }
+        
+        
+        let favoriteId= this.state.currentFavId
+        // console.log(favoriteId)
+        let recipeReview = document.getElementById('reviewText').value
+        console.log(recipeReview)
+        let body = {
+                review: recipeReview,
 
-
-        const newReview = {
-            userId: signedInUser,
-            message: reviewInput
-        }
-
-        APIHandler.addData("reviews", newReview)
+            }
+           
+            APIHandler.reviewRecipe("favorites", favoriteId, body )         
             .then(() => {
-                this.props.refresh()
+                this.getUserFavorites()
             })
-
-    }
-
+        }
 
     componentDidMount() {
         // this.refresh()
@@ -124,7 +132,12 @@ handleNewReview = (e) => {
                 <div>
                 {
                     this.state.favorites.map(favorite => 
-                    < FavoriteCard key={favorite.id} favorite={favorite} deleteFromFav={this.deleteFromFav}/>
+                    < FavoriteCard key={favorite.id} 
+                    favorite={favorite} 
+                    deleteFromFav={this.deleteFromFav}
+                    handleReview= {this.handleReview}
+                    handleReviewFieldChange={this.handleReviewFieldChange}
+                    currentFavId={this.currentFavId}/>
                     )
                 }
                 </div>

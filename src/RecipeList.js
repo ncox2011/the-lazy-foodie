@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import RecipeCard from './RecipeCard'
 import APIHandler from './APIHandler'
-import Search from './Search'
+
 
 
 export default class RecipeList extends Component {
