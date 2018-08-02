@@ -3,6 +3,7 @@ import {Card, CardHeader, CardImage, CardContent, Media, Icon, Image, MediaConte
 import '../index.css'
 import 'bulma/css/bulma.css';
 import Reviews from '../Review/Reviews'
+import AddReview from '../Review/AddReview'
 
 
 export default props => {
@@ -39,6 +40,7 @@ return (
     <button onClick={() => props.deleteFromFav(props.favorite.id)}>Delete</button>
     <button>Reviews</button>
 </Card>
-<Reviews/>
+<Reviews {props.favorite.recipe.reviews}/>
+<AddReview/>
 </React.Fragment>
 )}

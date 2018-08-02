@@ -41,14 +41,14 @@ export default class RecipeList extends Component {
     }
   };
 
-    refresh = () => {
-        APIHandler.getData("reviews")
-        .then(reviews => {
-            this.setState({ 
-                reviews: reviews
-            })
-        })
-    }
+    // refresh = () => {
+    //     APIHandler.getData("reviews")
+    //     .then(reviews => {
+    //         this.setState({ 
+    //             reviews: reviews
+    //         })
+    //     })
+    // }
 
 
     deleteFromFav = (favId) => {
@@ -77,38 +77,6 @@ export default class RecipeList extends Component {
   }
 };
 
-handleFieldChange = (event) => {
-    const stateToChange = {}
-    stateToChange[event.target.id] = event.target.value
-    this.setState(stateToChange)
-}
-
-handleNewReview = (e) => {
-        //Stops default action of form reloading
-        e.preventDefault()
-
-        let reviewInput = document.getElementById("reviewText").value
-        let signedInUser = JSON.parse(localStorage.getItem("userInfo"));
-        if (signedInUser === null) {
-            signedInUser = JSON.parse(sessionStorage.getItem("userInfo"));
-            signedInUser = signedInUser.userId;
-        } else {
-            signedInUser = signedInUser.userId;
-        }
-
-
-        const newReview = {
-            userId: signedInUser,
-            message: reviewInput
-        }
-
-        APIHandler.addData("reviews", newReview)
-            .then(() => {
-                this.props.refresh()
-            })
-
-    }
-
 
     componentDidMount() {
         // this.refresh()
@@ -124,7 +92,7 @@ handleNewReview = (e) => {
                 <div>
                 {
                     this.state.favorites.map(favorite => 
-                    < FavoriteCard key={favorite.id} favorite={favorite} deleteFromFav={this.deleteFromFav}/>
+                    < FavoriteCard key={favorite.id} favorite={favorite} deleteFromFav={this.deleteFromFav} printReviews={this.printReviews}/>
                     )
                 }
                 </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import {Card, Content} from 'bloomer'
 import '../index.css'
 import 'bulma/css/bulma.css';
+import {Link} from 'react-router-dom'
 
 
 
@@ -11,9 +12,15 @@ export default props => {
     return (
         <Card>
             <Content>
-                mumbo jumbo
+                {props.favorite.recipe.reviews}
             </Content>
-        <button>Add Review</button>
+        <Link className="card-link"
+        to={{
+            pathname: `/favorites/${review.id}/AddReview`,
+            state: {reviews: props.reviews }
+        }}>
+            Add Review
+            </Link>
         </Card>
     )
 }
