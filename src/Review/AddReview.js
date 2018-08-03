@@ -4,56 +4,44 @@ import APIHandler from '../APIHandler'
 export default class AddReview extends React.Component {
 
     state= {
-        newReview: ""
+        Review: ""
     }
+
     handleReviewFieldChange = (event) => {
-        const stateToChange = {}
-        stateToChange[event.target.id] = event.target.value
-        this.setState(stateToChange)
+        const review = {}
+        review[event.target.id] = event.target.value
+        this.setState(review)
     }
     
-    handleReview = (e) => {
-            //Stops default action of form reloading
-            e.preventDefault()
+    currentFavId = (id) => {
+        console.log("currentfavid function called")
+        this.setState({
+            currentFavId: id
+        })
+    }
     
-            let signedInUser = JSON.parse(localStorage.getItem("userInfo"));
-            if (signedInUser === null) {
-                signedInUser = JSON.parse(sessionStorage.getItem("userInfo"));
-                signedInUser = signedInUser.userId;
-            } else {
-                signedInUser = signedInUser.userId;
-            }
-
-                
-                let favoriteId= this.state.favoriteId
-                let recipeReview = this.state.review
-                let body = {
-                    review: recipeReview,
-
-                }
-               
-                APIHandler.reviewRecipe("favorites", favoriteId, body )         
-                .then(() => {
-                    this.props.printReviews()
-                }).then(() => {
-                    this.props.history.push('/Favorites')
-                })
-            }
+   createNewReview = (e) => {
+    e.preventDefault()
+    let body = {
+        review: this.state.Review
+    } 
+    this.props.handleReview(body, this.props.favoriteId)
+   }
+    
     
     
 render() {
     return (
         <React.Fragment>
-        <form className="input-form" onSubmit={this.handleNewReview}>
-        <label className="newReview">Write a Review</label>
-        <input type="text"
-                onChange={this.handleReviewFieldChange}
-                id="reviewText"
-                name="review"
-                value={this.state.review}
-                placeholder=""/>
-        <button type="submit" id="submit" className="savebtn">Save</button>
-        </form>
+        <form className="input-form" onSubmit={this.createNewReview} >
+                    <label className="newReview"></label>
+                    <input type="text"
+                        onChange={this.handleReviewFieldChange}
+                        id="Review"
+                        name="review"
+                        placeholder="Type your review here." />
+                    <button type="submit" id="submit" className="savebtn">Save</button>
+                </form>
         </React.Fragment>
     )
 }

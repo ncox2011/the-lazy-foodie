@@ -7,20 +7,13 @@ import {Link} from 'react-router-dom'
 
 
 export default props => {
-    let review = {}
+    let Review = {}
     
     return (
         <Card>
-            <Content>
-                {props.favorite.recipe.reviews}
-            </Content>
-        <Link className="card-link"
-        to={{
-            pathname: `/favorites/${review.id}/AddReview`,
-            state: {reviews: props.reviews }
-        }}>
-            Add Review
-            </Link>
-        </Card>
+                <Content>
+                    {props.favoriteReview}
+                </Content>
+            </Card>
     )
 }
