@@ -42,22 +42,8 @@ export default props => {
                 <button onClick={() => props.deleteFromFav(props.favorite.id)}>Delete</button>
                 <button>Reviews</button>
             </Card>
-            <Card>
-                <Content>
-                    {props.favorite.review}
-                </Content>
-            </Card>
-            <React.Fragment>
-                <form className="input-form" onSubmit={props.handleReview} >
-                    <label className="newReview"></label>
-                    <input type="text"
-                        onChange={props.handleReviewFieldChange}
-                        id="reviewText"
-                        name="review"
-                        placeholder="Type your review here." />
-                    <button type="submit" id="submit" className="savebtn" onClick={() => props.currentFavId(props.favorite.id)}>Save</button>
-                </form>
-            </React.Fragment>
+            <Reviews favoriteReview={props.favorite.review}/>
+            <AddReview favoriteId={props.favorite.id} handleReview={props.handleReview}/>
         </React.Fragment>
     )
 }
