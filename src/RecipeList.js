@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import RecipeCard from './RecipeCard'
 import APIHandler from './APIHandler'
+import { Button } from 'bloomer'
+import 'bulma/css/bulma.css';
 
 
 
@@ -81,7 +83,7 @@ export default class RecipeList extends Component {
                         onChange={this.onSearchChange}
                         // ref={(input) => this.onHand = input}
                         placeholder="Search..."/>
-                <button type="submit" id="submit" className="search-button">Submit</button>
+                <Button isColor="info" type="submit" id="submit" className="search-button">Submit</Button>
             </form>
                 {
                     this.state.recipes.map(recipe => 

@@ -1,33 +1,47 @@
 import React from 'react'
 import { Card, CardHeader, CardImage, CardContent, Media, Icon, Button, Image, MediaContent, Title, Subtitle, Content } from 'bloomer'
-import '../index.css'
 import 'bulma/css/bulma.css';
+import '../index.css'
 import Reviews from '../Review/Reviews'
 import AddReview from '../Review/AddReview'
 import { Link } from 'react-router-dom'
 import StarRatingComponent from 'react-star-rating-component'
 
 
-export default props => {
-    let favorite = {}
-
-
+export default class FavoriteCard extends React.Component {
+    state = {
+        rating: 1
+    }
+    onStarClick = (nextValue, prevValue, name) => {
+        console.log(nextValue, prevValue, name)
+      this.setState({
+          rating: nextValue
+        });
+    }
+render() {
     return (
         <React.Fragment>
             <Card className="FavCard" isDisplay="inline-flex">
                 <CardHeader>
                 </CardHeader>
                 <CardImage>
-                    <img className="recipeImage" src={props.favorite.recipe.image} />
+                    <img className="recipeImage" src={this.props.favorite.recipe.image} />
                 </CardImage>
+
+                <StarRatingComponent 
+                    name="rate1" 
+                    starCount={5}
+                    value={this.rating}
+                    onStarClick={this.onStarClick}
+                    />
                 <CardContent>
                     <Media>
                         <MediaContent>
-                            <Title isSize={6}>{props.favorite.recipe.title}</Title>
+                            <Title isSize={6}>{this.props.favorite.recipe.title}</Title>
                             <h3>Ingredients</h3>
                             <ul className="ingredientList">
                                 {
-                                    props.favorite.recipe.ingredients.map(ingredient => {
+                                    this.props.favorite.recipe.ingredients.map(ingredient => {
                                         return <li key={ingredient}>{ingredient}
                                         </li>
                                     })
@@ -36,23 +50,15 @@ export default props => {
                         </MediaContent>
                     </Media>
                     <p className="directions">
-                        {props.favorite.recipe.directions}
+                        {this.props.favorite.recipe.directions}
                         <br />
                     </p>
                 </CardContent>
-                <Button isColor="danger" onClick={() => props.deleteFromFav(props.favorite.id)}>Delete</Button>
-            </Card>
-            {/* <div>
-                <h2>Rating from state: {props.rating}</h2>
-                 <StarRatingComponent 
-                    name="rate1" 
-                    starCount={10}
-                    value={props.rating}
-                    onStarClick={props.onStarClick()}
-                    />
-                 </div> */}
-            <Reviews toggleReview={props.toggleReview} handleReview={props.handleReview} favoriteReview={props.favorite.review}/>
-            <AddReview visible={props.visible} favoriteId={props.favorite.id} handleReview={props.handleReview}/>
+                <Button isColor="danger" onClick={() => this.props.deleteFromFav(this.props.favorite.id)}>Delete</Button>
+            </Card>                 
+            <Reviews toggleReview={this.props.toggleReview} handleReview={this.props.handleReview} favoriteReview={this.props.favorite.review}/>
+            <AddReview visible={this.props.visible} favoriteId={this.props.favorite.id} handleReview={this.props.handleReview}/>
         </React.Fragment>
     )
+  }
 }
