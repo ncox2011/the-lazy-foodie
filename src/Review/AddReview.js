@@ -31,8 +31,10 @@ export default class AddReview extends React.Component {
     
     
 render() {
-    return (
-        <React.Fragment>
+    if(this.props.visible){
+
+        return (
+            <React.Fragment>
         <form  onSubmit={this.createNewReview} >
         {this.props.visible}
                     <label className="newReview"></label>
@@ -45,5 +47,8 @@ render() {
                 </form>
         </React.Fragment>
     )
+} else {
+    return null
+}
 }
 }

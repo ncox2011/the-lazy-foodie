@@ -16,7 +16,7 @@ export default props => {
                 </p>
                 <br>
                 </br>
-                <Button isColor="light">
+                    <Button isColor="light" onClick={() => {props.toggleReview()}}>
                 Add/Update Review
                 </Button>
                             

@@ -12,15 +12,17 @@ export default class FavoriteList extends Component {
         this.state = {
         favorites: [],
         searchText: '',
-        visible: false  
+        visible: false,
     }; 
  }
 
+ 
 
-toggleReview() {
-this.setState(
-    {visible: !this.state.visible
-    })
+
+toggleReview = () => {
+this.setState((prevState) => {
+    return {visible: !prevState.visible}
+})
 }
 
 
@@ -50,15 +52,6 @@ this.setState(
       })
     }
   };
-
-    // refresh = () => {
-    //     APIHandler.getData("reviews")
-    //     .then(reviews => {
-    //         this.setState({ 
-    //             reviews: reviews
-    //         })
-    //     })
-    // }
 
 
     deleteFromFav = (favId) => {
@@ -98,20 +91,7 @@ handleReview = (ReviewObject, favoriteId) => {
     } else {
         signedInUser = signedInUser.userId;
     }
-    
-    
-    // let favoriteId= this.state.currentFavId
-    // // console.log(favoriteId)
-    // let recipeReview = document.getElementById('Review').value
-    // this.setState({
-    //     review: recipeReview
-    // })
-    // console.log(recipeReview)
-    // let body = {
-    //         review: recipeReview,
-
-    //     }       
-
+       
             APIHandler.reviewRecipe("favorites", favoriteId, ReviewObject )         
             .then(() => {
                 this.getUserFavorites()
@@ -139,7 +119,10 @@ handleReview = (ReviewObject, favoriteId) => {
                     deleteFromFav={this.deleteFromFav}
                     handleReview ={this.handleReview}
                     toggleReview= {this.toggleReview}
-                    visible={this.state.visible} />
+                    visible={this.state.visible}
+                    rating={this.state.rating} 
+                    onStarClick={this.onStarClick}
+                    />
                     )
                 }
                 </div>
