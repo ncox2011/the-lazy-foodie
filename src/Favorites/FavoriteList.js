@@ -12,15 +12,22 @@ export default class FavoriteList extends Component {
         this.state = {
         favorites: [],
         searchText: '',
-        visible: false  
+        visible: false,
+        // rating: 1
     }; 
  }
 
+ 
+// onStarClick(nextValue, prevValue, name) {
+//   this.setState({
+//       rating: nextValue
+//     });
+// }
 
-toggleReview() {
-this.setState(
-    {visible: !this.state.visible
-    })
+toggleReview = () => {
+this.setState((prevState) => {
+    return {visible: !prevState.visible}
+})
 }
 
 
@@ -139,7 +146,10 @@ handleReview = (ReviewObject, favoriteId) => {
                     deleteFromFav={this.deleteFromFav}
                     handleReview ={this.handleReview}
                     toggleReview= {this.toggleReview}
-                    visible={this.state.visible} />
+                    visible={this.state.visible}
+                    // rating={this.state} 
+                    // onStarClick={this.onStarClick}
+                    />
                     )
                 }
                 </div>

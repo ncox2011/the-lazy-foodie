@@ -5,6 +5,7 @@ import 'bulma/css/bulma.css';
 import Reviews from '../Review/Reviews'
 import AddReview from '../Review/AddReview'
 import { Link } from 'react-router-dom'
+import StarRatingComponent from 'react-star-rating-component'
 
 
 export default props => {
@@ -41,6 +42,15 @@ export default props => {
                 </CardContent>
                 <Button isColor="danger" onClick={() => props.deleteFromFav(props.favorite.id)}>Delete</Button>
             </Card>
+            {/* <div>
+                <h2>Rating from state: {props.rating}</h2>
+                 <StarRatingComponent 
+                    name="rate1" 
+                    starCount={10}
+                    value={props.rating}
+                    onStarClick={props.onStarClick()}
+                    />
+                 </div> */}
             <Reviews toggleReview={props.toggleReview} handleReview={props.handleReview} favoriteReview={props.favorite.review}/>
             <AddReview visible={props.visible} favoriteId={props.favorite.id} handleReview={props.handleReview}/>
         </React.Fragment>
