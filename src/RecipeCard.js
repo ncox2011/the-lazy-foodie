@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card, CardHeader, CardImage, CardContent, Media, Icon, withHelperModifiers, Image, MediaContent, Title, Subtitle, Content} from 'bloomer'
+import {Card, CardHeader, CardImage, Button, CardContent, Media, Icon, withHelperModifiers, Image, MediaContent, Title, Subtitle, Content} from 'bloomer'
 import './index.css'
 import 'bulma/css/bulma.css';
 
@@ -11,7 +11,7 @@ export default props => {
 
 return (
   
-<Card isDisplay="inline">
+<Card className="RecipeCard" isDisplay="inline-flex">
     <CardHeader>
     </CardHeader>
     <CardImage>
@@ -31,12 +31,12 @@ return (
                 </ul>
             </MediaContent>
         </Media>
-        <Content>
+        <p className="directions">
             {props.recipe.directions}
             <br/>
-        </Content>
+        </p>
     </CardContent>
-    <button onClick={() => props.addToFav((props.recipe.id),(props.userId))}>Favorite</button>
+    <Button isColor="warning" onClick={() => props.addToFav((props.recipe.id),(props.userId))}>Favorite</Button>
     {/* <Icon isSize="medium" className="fas fa-heart"></Icon> */}
 </Card>
 

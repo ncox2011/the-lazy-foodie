@@ -33,7 +33,8 @@ export default class AddReview extends React.Component {
 render() {
     return (
         <React.Fragment>
-        <form className="input-form" onSubmit={this.createNewReview} >
+        <form  onSubmit={this.createNewReview} >
+        {this.props.visible}
                     <label className="newReview"></label>
                     <input type="text"
                         onChange={this.handleReviewFieldChange}
