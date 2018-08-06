@@ -5,6 +5,8 @@ import Register from './Register'
 import Welcome from './Welcome'
 import RecipeList from './RecipeList'
 import Favorites from './Favorites/FavoriteList'
+import AddReview from './Review/AddReview'
+
 // import FavoriteCard from './Favorites/FavoriteCard'
 
 
@@ -34,6 +36,7 @@ export default class ApplicationViews extends Component {
                         return <Login/>
                     }
                 }}/>
+                <Route exact path='/AddReview' component={AddReview}/>
             </React.Fragment>
         )
     }

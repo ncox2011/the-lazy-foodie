@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardHeader, CardImage, CardContent, Media, Icon, Image, MediaContent, Title, Subtitle, Content } from 'bloomer'
+import { Card, CardHeader, CardImage, CardContent, Media, Icon, Button, Image, MediaContent, Title, Subtitle, Content } from 'bloomer'
 import '../index.css'
 import 'bulma/css/bulma.css';
 import Reviews from '../Review/Reviews'
@@ -13,7 +13,7 @@ export default props => {
 
     return (
         <React.Fragment>
-            <Card>
+            <Card className="FavCard" isDisplay="inline-flex">
                 <CardHeader>
                 </CardHeader>
                 <CardImage>
@@ -34,16 +34,15 @@ export default props => {
                             </ul>
                         </MediaContent>
                     </Media>
-                    <Content>
+                    <p className="directions">
                         {props.favorite.recipe.directions}
                         <br />
-                    </Content>
+                    </p>
                 </CardContent>
-                <button onClick={() => props.deleteFromFav(props.favorite.id)}>Delete</button>
-                <button>Reviews</button>
+                <Button isColor="danger" onClick={() => props.deleteFromFav(props.favorite.id)}>Delete</Button>
             </Card>
-            <Reviews favoriteReview={props.favorite.review}/>
-            <AddReview favoriteId={props.favorite.id} handleReview={props.handleReview}/>
+            <Reviews toggleReview={props.toggleReview} handleReview={props.handleReview} favoriteReview={props.favorite.review}/>
+            <AddReview visible={props.visible} favoriteId={props.favorite.id} handleReview={props.handleReview}/>
         </React.Fragment>
     )
 }

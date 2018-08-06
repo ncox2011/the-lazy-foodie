@@ -11,9 +11,18 @@ export default class FavoriteList extends Component {
         super();
         this.state = {
         favorites: [],
-        searchText: ''
+        searchText: '',
+        visible: false  
     }; 
  }
+
+
+toggleReview() {
+this.setState(
+    {visible: !this.state.visible
+    })
+}
+
 
  getUserFavorites = () => {
      let localUser = JSON.parse(localStorage.getItem("userInfo")); // gets localStorage
@@ -128,7 +137,9 @@ handleReview = (ReviewObject, favoriteId) => {
                     < FavoriteCard key={favorite.id} 
                     favorite={favorite} 
                     deleteFromFav={this.deleteFromFav}
-                    handleReview ={this.handleReview}/>
+                    handleReview ={this.handleReview}
+                    toggleReview= {this.toggleReview}
+                    visible={this.state.visible} />
                     )
                 }
                 </div>

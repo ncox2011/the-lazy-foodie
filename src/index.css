@@ -7,4 +7,28 @@ body {
 .recipeImage {
   width: 250px;
   height: 200px;
+  margin-left: 10px
+}
+
+.directions {
+  width: 300px;
+}
+
+.FavCard {
+  margin-right: 0%;
+  display: table;
+}
+
+.review {
+  margin-right: 0%;
+  display: table;
+}
+
+.reveiwPara {
+  width: 300px;
+}
+
+.RecipeCard {
+  margin-right: 0%;
+  display: table
 }
