@@ -33,15 +33,9 @@
     },
     {
       "userId": 3,
-      "recipeId": 1,
-      "id": 18,
-      "review": "this recipe made very juicy chicken.  Next time I would take out the brussel sprouts"
-    },
-    {
-      "userId": 3,
       "recipeId": 4,
       "id": 19,
-      "review": "decrease peas by half"
+      "review": "add more salt"
     },
     {
       "userId": 3,
@@ -58,6 +52,11 @@
       "userId": 3,
       "recipeId": 3,
       "id": 22
+    },
+    {
+      "userId": 3,
+      "recipeId": 5,
+      "id": 23
     }
   ],
   "reviews": [],

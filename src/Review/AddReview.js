@@ -42,6 +42,7 @@ render() {
                         onChange={this.handleReviewFieldChange}
                         id="Review"
                         name="review"
+                        value={this.props.favoriteReview}
                         placeholder="Type your review here." />
                     <button type="submit" id="submit" className="savebtn">Save</button>
                 </form>
