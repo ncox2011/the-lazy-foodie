@@ -5,22 +5,31 @@ import '../index.css'
 import Reviews from '../Review/Reviews'
 import AddReview from '../Review/AddReview'
 import { Link } from 'react-router-dom'
-import APIHandler from '../APIHandler'
 import StarRatingComponent from 'react-star-rating-component'
+import APIHandler from '../APIHandler'
 
 
 export default class FavoriteCard extends React.Component {
     state = {
-        rating: 1
+        rating: 0
     }
     //This handles the click on the star rating
     onStarClick = (nextValue, prevValue, name) => {
-        console.log(nextValue, prevValue, name)
+        // console.log(nextValue, prevValue, name)
       this.setState({
           rating: nextValue
-        })
-            let body = this.state.rating
-            APIHandler.rateRecipe("favorite", this.props.favoriteId, body)
+        });
+        let body = {rating: this.state.rating}
+        APIHandler.rateRecipe(this.props.favorite.id, body)
+    }
+
+    componentDidMount() {
+        if (this.props.favorite.rating !== null) {
+            console.log("rating", this.props.favorite.rating)
+            this.setState({
+                rating: this.props.favorite.rating
+            })
+        }
     }
 //prints the individual favorite cards
 render() {
@@ -36,8 +45,9 @@ render() {
                 <StarRatingComponent 
                     name="rate1" 
                     starCount={5}
-                    value={this.rating}
+                    value={this.state.rating}
                     onStarClick={this.onStarClick}
+                    starColor="#ffb400"
                     />
                 <CardContent>
                     <Media>
@@ -62,7 +72,7 @@ render() {
                 <Button isColor="danger" onClick={() => this.props.deleteFromFav(this.props.favorite.id)}>Delete</Button>
             </Card>                 
             <Reviews toggleReview={this.props.toggleReview} handleReview={this.props.handleReview} favoriteReview={this.props.favorite.review}/>
-            <AddReview toggleReview={this.props.toggleReview} visible={this.props.visible} favoriteId={this.props.favorite.id} handleReview={this.props.handleReview}/>
+            <AddReview toggleReview={this.props.toggleReview}visible={this.props.visible} favoriteId={this.props.favorite.id} handleReview={this.props.handleReview}/>
         </React.Fragment>
     )
   }

@@ -81,8 +81,7 @@ this.setState((prevState) => {
 };
 
 handleReview = (ReviewObject, favoriteId) => {
-    //Stops default action of form reloading
-    
+   
     
     let signedInUser = JSON.parse(localStorage.getItem("userInfo"));
     if (signedInUser === null) {
@@ -102,8 +101,7 @@ handleReview = (ReviewObject, favoriteId) => {
 
     componentDidMount() {
         // this.refresh()
-        this.getUserFavorites()
-        
+        this.getUserFavorites()       
     }
 
     render() {
