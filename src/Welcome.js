@@ -24,15 +24,15 @@ const Welcome = props => {
             </Link>
         </Button>
       </Container>
-      <Box className="HomeImageSection" pad={{horizontal: 'large'}}>
-        <div className="HomeImageShadowWrapper">
+      {/* <Box className="HomeImageSection" pad={{horizontal: 'large'}}> */}
+        {/* <div className="HomeImageShadowWrapper">
           <Image
             alt="Logo"
             size="large"
             src="https://s25.postimg.cc/4pspdnfj3/the_foodie_1.jpg"
           />
-        </div>
-      </Box>
+        </div> */}
+      {/* </Box> */}
     </Container>
   )
 }

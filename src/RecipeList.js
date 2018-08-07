@@ -63,7 +63,7 @@ export default class RecipeList extends Component {
             })
         }).then(() => {
                 
-            console.log("add to fav btn works")
+            alert("Added to your favorites")
         })
 }
 
