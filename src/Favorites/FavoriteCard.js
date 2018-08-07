@@ -12,12 +12,14 @@ export default class FavoriteCard extends React.Component {
     state = {
         rating: 1
     }
+    //This handles the click on the star rating
     onStarClick = (nextValue, prevValue, name) => {
         console.log(nextValue, prevValue, name)
       this.setState({
           rating: nextValue
         });
     }
+//prints the individual favorite cards
 render() {
     return (
         <React.Fragment>
@@ -57,7 +59,7 @@ render() {
                 <Button isColor="danger" onClick={() => this.props.deleteFromFav(this.props.favorite.id)}>Delete</Button>
             </Card>                 
             <Reviews toggleReview={this.props.toggleReview} handleReview={this.props.handleReview} favoriteReview={this.props.favorite.review}/>
-            <AddReview visible={this.props.visible} favoriteId={this.props.favorite.id} handleReview={this.props.handleReview}/>
+            <AddReview toggleReview={this.props.toggleReview} visible={this.props.visible} favoriteId={this.props.favorite.id} handleReview={this.props.handleReview}/>
         </React.Fragment>
     )
   }

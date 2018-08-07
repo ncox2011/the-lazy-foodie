@@ -7,30 +7,36 @@ export default class AddReview extends React.Component {
         Review: ""
     }
 
+    //gets the review text from the review input field and sets state
     handleReviewFieldChange = (event) => {
         const review = {}
         review[event.target.id] = event.target.value
         this.setState(review)
     }
     
-    currentFavId = (id) => {
+    //gets the id of the current card 
+        currentFavId = (id) => {
         console.log("currentfavid function called")
         this.setState({
             currentFavId: id
         })
     }
-    
+   
+    //on event, sets body equal to the input field text and passes the body and id in as parameters
    createNewReview = (e) => {
     e.preventDefault()
     let body = {
         review: this.state.Review
     } 
     this.props.handleReview(body, this.props.favoriteId)
+    this.props.toggleReview
    }
+ 
     
     
     
 render() {
+    //if statement for the toggle function on the addReview button
     if(this.props.visible){
 
         return (
@@ -44,7 +50,7 @@ render() {
                         name="review"
                         value={this.props.favoriteReview}
                         placeholder="Type your review here." />
-                    <button type="submit" id="submit" className="savebtn">Save</button>
+                    <button type="submit" id="submit" className="savebtn" >Save</button>
                 </form>
         </React.Fragment>
     )

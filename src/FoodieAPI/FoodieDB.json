@@ -41,7 +41,7 @@
       "userId": 3,
       "recipeId": 9,
       "id": 20,
-      "review": "much better with more cilantro"
+      "review": "nom nom"
     },
     {
       "userId": 3,
@@ -57,6 +57,11 @@
       "userId": 3,
       "recipeId": 5,
       "id": 23
+    },
+    {
+      "userId": 3,
+      "recipeId": 1,
+      "id": 24
     }
   ],
   "reviews": [],
@@ -65,26 +70,45 @@
       "id": 1,
       "title": "Rotisserie chicken with brussel sprouts",
       "image": "https://images.pexels.com/photos/265393/pexels-photo-265393.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-      "prepTime:": "20 minutes",
       "ingredients": [
-        "Whole chicken",
-        "brussel sprouts",
-        "carrots",
-        "seasoning"
+        "One 4-pound chicken",
+        "2 tablespoons extra-virgin olive oil",
+        "Kosher salt",
+        "Pepper",
+        "40 brussels sprouts (1 1/2 pounds), trimmed",
+        "2 tablespoons unsalted butter, cubed",
+        "1 teaspoon caraway seeds",
+        "2 tablespoons fresh lemon juice, plus wedges for serving"
       ],
-      "directions": "Lorem chicken dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla."
+      "directions": "Preheat the oven to 450°. Rub the chicken with the olive oil and season with salt and pepper. Place the chicken in a roasting pan and roast for 30 minutes. Add the brussels sprouts, butter and caraway seeds to the pan and roast for 20 minutes longer, until the chicken is cooked through. Sprinkle the lemon juice over the sprouts and let the chicken rest for 15 minutes. Carve the chicken, toss the brussels sprouts and serve with lemon wedges."
     },
     {
       "id": 2,
       "title": "pickled veggies",
       "image": "https://images.pexels.com/photos/56014/pizza-pizza-service-italian-eat-56014.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-      "prepTime:": "10 minutes",
       "ingredients": [
-        "cucumbers",
-        "jalepenos",
-        "broccoli"
+        "3 cups cauliflower florets",
+        "1/2 pound baby carrots, halved lengthwise",
+        "1 fennel bulb, cored and cut into 2-by-1/2-inch matchsticks",
+        "1 red bell pepper, cut into 2-by-1/2-inch matchsticks",
+        "1 zucchini (1/2 pound), cut into 2-by-1/2-inch matchsticks",
+        "1/2 pound yellow wax beans or green beans, cut into 2-inch lengths",
+        "3 dried guajillo chiles, seeded and cut into thin strips",
+        "Boiling water",
+        "3 cups cider vinegar",
+        "1/2 cup white wine vinegar",
+        "3/4 cup sugar",
+        "1 tablespoon kosher salt",
+        "1 teaspoon coriander seeds",
+        "1 teaspoon black peppercorns",
+        "1 tablespoon julienned fresh ginger",
+        "1 bay leaf",
+        "8 garlic cloves, smashed",
+        "Extra-virgin olive oil, for drizzling",
+        "1/4 cup chopped flat-leaf parsley",
+        "1/4 cup snipped chives"
       ],
-      "directions": "Lorem pickles dolor sit amet.  Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla."
+      "directions": "In a large, deep, nonreactive bowl or heatproof glass jar, combine the cauliflower, carrots, fennel, red bell pepper, zucchini and beans. In a medium heatproof bowl, cover the chiles with boiling water and let stand until softened, about 10 minutes. Drain the chiles and transfer to a large saucepan. Add the cider vinegar, white wine vinegar, sugar, salt, coriander, peppercorns, ginger, bay leaf and garlic. Add 3 cups of water and bring to a boil, stirring to dissolve the sugar. Pour the hot liquid over the vegetables and cover with a plate to keep the vegetables submerged. Let cool to room temperature, then cover with plastic wrap and refrigerate for 2 to 3 days. Drain the vegetables and transfer to a large platter. Drizzle with olive oil, garnish with the parsley and chives and serve."
     },
     {
       "id": 3,

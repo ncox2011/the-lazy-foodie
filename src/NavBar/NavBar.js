@@ -27,7 +27,7 @@ export default class NavBar extends Component {
             <Navbar style={{ border: 'solid 1px #00D1B2', margin: '0' }}>
                 <NavbarItem href='/Favorites'>Favorites</NavbarItem>
                 <NavbarItem href='/RecipeList'>Home</NavbarItem>
-                {/* <img src="https://s25.postimg.cc/4pspdnfj3/the_foodie_1.jpg" alt="logo" width="200px" height="200px" /> */}
+                <img className="navImg" src="https://s25.postimg.cc/p98rxv633/foodiesnippet.jpg" alt="logo" width="300px" height="10px" />
             </Navbar>
         )
     }
