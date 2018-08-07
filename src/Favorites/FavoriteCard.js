@@ -5,6 +5,7 @@ import '../index.css'
 import Reviews from '../Review/Reviews'
 import AddReview from '../Review/AddReview'
 import { Link } from 'react-router-dom'
+import APIHandler from '../APIHandler'
 import StarRatingComponent from 'react-star-rating-component'
 
 
@@ -17,7 +18,9 @@ export default class FavoriteCard extends React.Component {
         console.log(nextValue, prevValue, name)
       this.setState({
           rating: nextValue
-        });
+        })
+            let body = this.state.rating
+            APIHandler.rateRecipe("favorite", this.props.favoriteId, body)
     }
 //prints the individual favorite cards
 render() {
