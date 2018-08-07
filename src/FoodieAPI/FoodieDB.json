@@ -35,23 +35,27 @@
       "userId": 3,
       "recipeId": 4,
       "id": 19,
-      "review": "add more salt"
+      "review": "add more salt",
+      "rating": 4
     },
     {
       "userId": 3,
       "recipeId": 9,
       "id": 20,
-      "review": "nom nom"
+      "review": "nom nom",
+      "rating": 3
     },
     {
       "userId": 3,
       "recipeId": 2,
-      "id": 21
+      "id": 21,
+      "rating": 3
     },
     {
       "userId": 3,
       "recipeId": 3,
-      "id": 22
+      "id": 22,
+      "rating": 5
     },
     {
       "userId": 3,
