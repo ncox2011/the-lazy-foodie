@@ -42,18 +42,14 @@
       "userId": 3,
       "recipeId": 2,
       "id": 21,
-      "rating": 3
-    },
-    {
-      "userId": 3,
-      "recipeId": 3,
-      "id": 22,
-      "rating": 5
+      "rating": 3,
+      "review": "this was ok"
     },
     {
       "userId": 3,
       "recipeId": 5,
-      "id": 23
+      "id": 23,
+      "rating": 5
     },
     {
       "userId": 3,
@@ -64,6 +60,11 @@
       "userId": 3,
       "recipeId": 2,
       "id": 25
+    },
+    {
+      "userId": 3,
+      "recipeId": 3,
+      "id": 26
     }
   ],
   "reviews": [],
