@@ -25,10 +25,23 @@ export default class RecipeList extends Component {
     }
 
     findRecipe = (searchText) => {
-        APIHandler.getData(`recipes?q=${this.state.searchText}`)
+        console.log(searchText)
+        let ingredientList = ""
+        let itemArray = searchText.split(", ")
+        itemArray.forEach(item => {
+            let ingredient = `&ingredients_like=${item}`
+            console.log(ingredient)
+            ingredientList += ingredient
+        })
+        APIHandler.getData(`recipes?${ingredientList}`)
         .then(recipes => {
-            console.log("this is the find recipe recipe", recipes)
+            // console.log("this is the find recipe recipe", recipes)
             this.setState({recipes: recipes})
+        }).then(() => {
+            this.setState({searchText: ""})
+        }).then(() => {
+            let form = document.getElementById("searchText")
+            form.value = ""
         })
     }
 
@@ -38,7 +51,8 @@ export default class RecipeList extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        this.findRecipe()
+        this.findRecipe(this.state.searchText)
+
 
     }
 
@@ -80,6 +94,7 @@ export default class RecipeList extends Component {
                 <label className="is-hidden" htmlFor="search">Find Recipes</label>
                 <input type="search"
                         name="search"
+                        id="searchText"
                         onChange={this.onSearchChange}
                         // ref={(input) => this.onHand = input}
                         placeholder="Search..."/>
