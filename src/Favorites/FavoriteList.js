@@ -108,7 +108,8 @@ handleReview = (ReviewObject, favoriteId) => {
         
         return (
             <React.Fragment>
-            <title>Your Favorites</title>
+                <div className="favDiv">
+            <h1 className="favoriteh1">Your Favorite Recipes</h1>
                 <div>
                 {
                     this.state.favorites.map(favorite => 
@@ -123,6 +124,7 @@ handleReview = (ReviewObject, favoriteId) => {
                     />
                     )
                 }
+                </div>
                 </div>
             </React.Fragment>
         )

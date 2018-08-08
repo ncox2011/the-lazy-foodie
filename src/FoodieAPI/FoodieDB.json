@@ -17,6 +17,12 @@
       "email": "d@gmail.com",
       "password": "123",
       "id": 5
+    },
+    {
+      "name": "vik",
+      "email": "vik@gmail.com",
+      "password": "123",
+      "id": 6
     }
   ],
   "friends": [],
@@ -29,27 +35,15 @@
     {
       "userId": 5,
       "recipeId": 1,
-      "id": 17
-    },
-    {
-      "userId": 3,
-      "recipeId": 4,
-      "id": 19,
-      "review": "this recipe made very juicy chicken.  Next time I would take out the brussel sprouts",
-      "rating": 4
-    },
-    {
-      "userId": 3,
-      "recipeId": 2,
-      "id": 21,
-      "rating": 3,
-      "review": "this was ok"
+      "id": 17,
+      "review": "add a pinch more salt and cover with aluminum foil"
     },
     {
       "userId": 3,
       "recipeId": 5,
       "id": 23,
-      "rating": 5
+      "rating": 5,
+      "review": "dfjkdsla;dfkjdlsfkjdskfdsljfkdjfldsjsfljfjfldsjlfj fkdlsjfieljf  kljdsliej lfkjdlsj e'aj fl;ie lkdkjl jfeoa  lkjfeilw jkkjfile;a sdkfl eia;j kfldjs leijrl kj lkjfdssi ealj; fkkdls;a ijrle; lskdjfoeij "
     },
     {
       "userId": 3,
@@ -65,6 +59,26 @@
       "userId": 3,
       "recipeId": 3,
       "id": 26
+    },
+    {
+      "userId": 5,
+      "recipeId": 2,
+      "id": 27
+    },
+    {
+      "userId": 5,
+      "recipeId": 4,
+      "id": 28
+    },
+    {
+      "userId": 5,
+      "recipeId": 3,
+      "id": 29
+    },
+    {
+      "userId": 5,
+      "recipeId": 2,
+      "id": 30
     }
   ],
   "reviews": [],

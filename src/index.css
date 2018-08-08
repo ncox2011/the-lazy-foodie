@@ -24,8 +24,9 @@ body {
   display: table;
 }
 
-.reveiwPara {
-  width: 300px;
+.reviewDiv {
+  margin-right: 0%;
+  display: table;
 }
 
 .RecipeCard {
@@ -33,6 +34,12 @@ body {
   display: table
 }
 
-body {
-  background-image: url("https://images.freeimages.com/images/large-previews/727/pizza-2-1326533.jpg")
+.favoriteh1 {
+  font-size: 50px;
+  text-align: center;
+  
+}
+
+.favDiv {
+  background-color: blanchedalmond;
 }
