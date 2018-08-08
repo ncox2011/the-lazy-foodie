@@ -3,6 +3,7 @@ import RecipeCard from './RecipeCard'
 import APIHandler from './APIHandler'
 import { Button } from 'bloomer'
 import 'bulma/css/bulma.css';
+import './Recipes.css'
 
 
 
@@ -90,6 +91,7 @@ export default class RecipeList extends Component {
         
         return (
             <React.Fragment>
+                <div className="recipesList">
                 <form className="search-form" onSubmit={this.handleSubmit}>
                 <label className="is-hidden" htmlFor="search">Find Recipes</label>
                 <input type="search"
@@ -105,6 +107,7 @@ export default class RecipeList extends Component {
                     < RecipeCard key={recipe.id} recipe={recipe} addToFav={this.addToFav}/>
                     )
                 }
+            </div>
             </React.Fragment>
         )
     }
