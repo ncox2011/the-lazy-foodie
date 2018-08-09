@@ -15,12 +15,11 @@ export default class FavoriteCard extends React.Component {
     }
     //This handles the click on the star rating
     onStarClick = (nextValue, prevValue, name) => {
-        // console.log(nextValue, prevValue, name)
       this.setState({
           rating: nextValue
         });
-        let body = {rating: this.state.rating}
-        APIHandler.rateRecipe(this.props.favorite.id, body)
+        let body = {rating: this.state.rating}  //sets body to updated rating
+        APIHandler.rateRecipe(this.props.favorite.id, body) //patches rating onto favorite recipe
     }
 
     componentDidMount() {

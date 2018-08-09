@@ -8,13 +8,13 @@ export default class Login extends Component {
         email: "",
         password: "",
     };
-
+//gets the value of input fields
     handleFieldChange = event => {
         const stateToChange = {}
         stateToChange[event.target.id] = event.target.value
         this.setState(stateToChange);
     }
-
+//on button click checks database to see if user exists, then saves user information in local or session storage
     handleLogin = () => {
         APIHandler.getData(`users?email=${this.state.email}`)
       .then(user => {
