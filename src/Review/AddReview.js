@@ -4,7 +4,7 @@ import APIHandler from '../APIHandler'
 export default class AddReview extends React.Component {
 
     state= {
-        Review: ""
+        Review: "",
     }
 
     //gets the review text from the review input field and sets state
@@ -29,9 +29,15 @@ export default class AddReview extends React.Component {
         review: this.state.Review
     } 
     this.props.handleReview(body, this.props.favoriteId)
-    this.props.toggleReview
+    this.props.toggleReview()
    }
  
+   componentDidMount() {
+       this.setState({
+           Review: this.props.favoriteReview.slice()
+       })
+   }
+
     
     
     
@@ -48,7 +54,7 @@ render() {
                         onChange={this.handleReviewFieldChange}
                         id="Review"
                         name="review"
-                        value={this.props.favoriteReview}
+                        value={this.state.Review}
                         placeholder="Type your review here." />
                     <button type="submit" id="submit" className="savebtn" >Save</button>
                 </form>

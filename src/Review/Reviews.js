@@ -18,8 +18,11 @@ export default props => {
                 <br>
                 </br>
                     <Button isColor="light" onClick={() => {props.toggleReview()}}>
-                Add/Update Review
-                </Button>    
+                Add Review
+                </Button> 
+                <Button isColor="light" onClick={() => {props.toggleReview()}}>
+                Update Review
+                </Button>   
             </Card>
         </div>
     )

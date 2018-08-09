@@ -72,7 +72,7 @@ render() {
                 <Button isColor="danger" onClick={() => this.props.deleteFromFav(this.props.favorite.id)}>Delete</Button>
             </Card>                 
             <Reviews toggleReview={this.props.toggleReview} handleReview={this.props.handleReview} favoriteReview={this.props.favorite.review}/>
-            <AddReview toggleReview={this.props.toggleReview}visible={this.props.visible} favoriteId={this.props.favorite.id} handleReview={this.props.handleReview}/>
+            <AddReview toggleReview={this.props.toggleReview}visible={this.props.visible} favoriteReview={this.props.favorite.review} favoriteId={this.props.favorite.id} handleReview={this.props.handleReview}/>
         </React.Fragment>
     )
   }
