@@ -43,3 +43,9 @@ body {
 .favDiv {
   background-color: blanchedalmond;
 }
+
+.userImage {
+  width: 250px;
+  height: 200px;
+  margin-left: 10px
+}

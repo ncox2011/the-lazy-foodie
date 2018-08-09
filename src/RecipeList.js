@@ -13,18 +13,19 @@ export default class RecipeList extends Component {
         super();
         this.state = {
         recipes: [],
-        searchText: ''
+        searchText: '',
+        review: ''
     }; 
    this.addToFav = this.addToFav.bind(this)
 }
-
+//pulls recipes from database and updates state
     refresh = () => {
         APIHandler.getData("recipes")
         .then(recipes => {
             this.setState({ recipes: recipes})
         })
     }
-
+//splits user input at the ,_ and iterates through array creating the ingredient search property, then concatenates them into ingredientList for search
     findRecipe = (searchText) => {
         console.log(searchText)
         let ingredientList = ""
@@ -45,20 +46,18 @@ export default class RecipeList extends Component {
             form.value = ""
         })
     }
-
+//when search field changes update searchText state 
     onSearchChange = event => {
         this.setState({ searchText: event.target.value})
     }
-
+//when button is clicked, run findRecipe function
     handleSubmit = e => {
         e.preventDefault();
         this.findRecipe(this.state.searchText)
 
 
     }
-
-
-
+//checks for current user to get userId and calls post funtion to add to userFavorites. shows alert to let user know it was saved
     addToFav = (recipeId, userId) => {
     let currentUser = JSON.parse(localStorage.getItem("userInfo"));
     if (currentUser === null) {
@@ -74,14 +73,15 @@ export default class RecipeList extends Component {
             },
             body: JSON.stringify({
                 userId: userId,
-                recipeId: +recipeId
+                recipeId: +recipeId,
+                review: ''
             })
         }).then(() => {
                 
             alert("Added to your favorites")
         })
 }
-
+//on page load retrieve all recipes with refresh function
     componentWillMount() {
         this.refresh()
         
@@ -98,7 +98,6 @@ export default class RecipeList extends Component {
                         name="search"
                         id="searchText"
                         onChange={this.onSearchChange}
-                        // ref={(input) => this.onHand = input}
                         placeholder="Search..."/>
                 <Button isColor="info" type="submit" id="submit" className="search-button">Submit</Button>
             </form>
