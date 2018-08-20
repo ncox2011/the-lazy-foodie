@@ -27,17 +27,14 @@ export default class RecipeList extends Component {
     }
 //splits user input at the ,_ and iterates through array creating the ingredient search property, then concatenates them into ingredientList for search
     findRecipe = (searchText) => {
-        console.log(searchText)
         let ingredientList = ""
         let itemArray = searchText.split(", ")
         itemArray.forEach(item => {
             let ingredient = `&ingredients_like=${item}`
-            console.log(ingredient)
             ingredientList += ingredient
         })
         APIHandler.getData(`recipes?${ingredientList}`)
         .then(recipes => {
-            // console.log("this is the find recipe recipe", recipes)
             this.setState({recipes: recipes})
         }).then(() => {
             this.setState({searchText: ""})

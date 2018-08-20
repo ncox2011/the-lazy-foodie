@@ -42,7 +42,6 @@ return (
         </p>
     </CardContent>
     <Button isColor="danger" onClick={() => props.addToFav((props.recipe.id),(props.userId))}><FontAwesomeIcon icon="heart" isSize="30px" /></Button>
-    {/* <Icon isSize="medium" className="fas fa-heart"></Icon> */}
 </Card>
 
 )}

@@ -8,9 +8,6 @@ import Favorites from './Favorites/FavoriteList'
 import AddReview from './Review/AddReview'
 import UserList from './UserList'
 
-// import FavoriteCard from './Favorites/FavoriteCard'
-
-
 export default class ApplicationViews extends Component {
 
     isAuthenticated = () => 
