@@ -59,7 +59,8 @@
       "userId": 3,
       "recipeId": 3,
       "id": 26,
-      "review": "cgfjhykuikyt"
+      "review": "this recipe made very juicy chicken.  Next time I would take out the brussel sprouts",
+      "rating": 3
     },
     {
       "userId": 5,
@@ -101,13 +102,7 @@
       "userId": 3,
       "recipeId": 9,
       "review": "",
-      "id": 37
-    },
-    {
-      "userId": 3,
-      "recipeId": 2,
-      "review": "",
-      "id": 38
+      "id": 39
     }
   ],
   "reviews": [],

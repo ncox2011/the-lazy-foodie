@@ -114,8 +114,7 @@ handleReview = (ReviewObject, favoriteId) => {
                     handleReview ={this.handleReview}
                     toggleReview= {this.toggleReview}
                     visible={this.state.visible}
-                    rating={this.state.rating} 
-                    onStarClick={this.onStarClick}
+                    // rating={this.state.rating} 
                     />
                     )
                 }
