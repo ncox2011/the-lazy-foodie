@@ -56,13 +56,6 @@
       "review": "add a pinch more salt and cover with aluminum foil"
     },
     {
-      "userId": 3,
-      "recipeId": 3,
-      "id": 26,
-      "review": "this recipe made very juicy chicken.  Next time I would take out the brussel sprouts",
-      "rating": 3
-    },
-    {
       "userId": 5,
       "recipeId": 2,
       "id": 27,
@@ -94,15 +87,24 @@
     },
     {
       "userId": 3,
-      "recipeId": 10,
+      "recipeId": 9,
       "review": "",
-      "id": 36
+      "id": 39,
+      "rating": 1
     },
     {
       "userId": 3,
-      "recipeId": 9,
+      "recipeId": 2,
       "review": "",
-      "id": 39
+      "rating": 4,
+      "id": 40
+    },
+    {
+      "userId": 3,
+      "recipeId": 6,
+      "review": "",
+      "rating": 0,
+      "id": 41
     }
   ],
   "reviews": [],

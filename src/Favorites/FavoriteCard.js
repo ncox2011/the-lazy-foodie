@@ -18,7 +18,7 @@ export default class FavoriteCard extends React.Component {
       this.setState({
           rating: nextValue
         });
-        let body = {rating: this.state.rating}  //sets body to updated rating
+        let body = {rating: nextValue}  //sets body to updated rating
         APIHandler.rateRecipe(this.props.favorite.id, body) //patches rating onto favorite recipe
     }
 
