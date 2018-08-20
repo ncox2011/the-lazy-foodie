@@ -10,16 +10,20 @@ export default props => {
     let Review = {}
     
     return (
+        <div className="reviewDiv">
         <Card className="review" isDisplay="block">
-                <p className="reviewPara">
+                <p>
                     {props.favoriteReview}
                 </p>
                 <br>
                 </br>
                     <Button isColor="light" onClick={() => {props.toggleReview()}}>
-                Add/Update Review
-                </Button>
-                            
+                Add Review
+                </Button> 
+                <Button isColor="light" onClick={() => {props.toggleReview()}}>
+                Update Review
+                </Button>   
             </Card>
+        </div>
     )
 }

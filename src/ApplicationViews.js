@@ -6,9 +6,7 @@ import Welcome from './Welcome'
 import RecipeList from './RecipeList'
 import Favorites from './Favorites/FavoriteList'
 import AddReview from './Review/AddReview'
-
-// import FavoriteCard from './Favorites/FavoriteCard'
-
+import UserList from './UserList'
 
 export default class ApplicationViews extends Component {
 
@@ -37,6 +35,13 @@ export default class ApplicationViews extends Component {
                     }
                 }}/>
                 <Route exact path='/AddReview' component={AddReview}/>
+                <Route exact path='/UserList' render={props => {
+                    if (this.isAuthenticated()) {
+                        return <UserList/>
+                    } else {
+                        return <Login/>
+                    }
+                }}/>
             </React.Fragment>
         )
     }

@@ -30,8 +30,9 @@ export default class APIHandler {
           `http://localhost:5002/favorites?userId=${userNumber}`
         ).then(e => e.json());
       };
-      static rateRecipe = (section, id, body) => {
-        return fetch(`http://localhost:5002/${section}/${id}`, {
+      static rateRecipe = (id, body) => {
+          console.log(body)
+        return fetch(`http://localhost:5002/favorites/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

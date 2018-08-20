@@ -2,6 +2,11 @@ import React from 'react'
 import {Card, CardHeader, CardImage, Button, CardContent, Media, Icon, withHelperModifiers, Image, MediaContent, Title, Subtitle, Content} from 'bloomer'
 import './index.css'
 import 'bulma/css/bulma.css';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faHeart)
 
 
 
@@ -36,8 +41,7 @@ return (
             <br/>
         </p>
     </CardContent>
-    <Button isColor="warning" onClick={() => props.addToFav((props.recipe.id),(props.userId))}>Favorite</Button>
-    {/* <Icon isSize="medium" className="fas fa-heart"></Icon> */}
+    <Button isColor="danger" onClick={() => props.addToFav((props.recipe.id),(props.userId))}><FontAwesomeIcon icon="heart" isSize="30px" /></Button>
 </Card>
 
 )}

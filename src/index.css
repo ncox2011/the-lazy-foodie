@@ -24,11 +24,28 @@ body {
   display: table;
 }
 
-.reveiwPara {
-  width: 300px;
+.reviewDiv {
+  margin-right: 0%;
+  display: table;
 }
 
 .RecipeCard {
   margin-right: 0%;
   display: table
+}
+
+.favoriteh1 {
+  font-size: 50px;
+  text-align: center;
+  
+}
+
+.favDiv {
+  background-color: blanchedalmond;
+}
+
+.userImage {
+  width: 250px;
+  height: 200px;
+  margin-left: 10px
 }

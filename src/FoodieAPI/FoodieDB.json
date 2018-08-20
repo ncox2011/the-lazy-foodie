@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "name": "nc",
+      "name": "Natasha",
       "email": "nc@gmail.com",
       "password": "123",
       "id": 3
@@ -17,56 +17,94 @@
       "email": "d@gmail.com",
       "password": "123",
       "id": 5
+    },
+    {
+      "name": "vik",
+      "email": "vik@gmail.com",
+      "password": "123",
+      "id": 6
     }
   ],
-  "friends": [],
-  "favorites": [
+  "profiles": [
+    {
+      "userName": "Dhurata",
+      "image": "https://scontent-ort2-1.xx.fbcdn.net/v/t31.0-8/193609_10152131982075570_1527903904_o.jpg?_nc_cat=0&oh=394384923079ffc3a35be950a898d4cf&oe=5BCD2533",
+      "userId": 5,
+      "id": 1,
+      "statement": "I like finding recipes for my husband to cook."
+    },
+    {
+      "userName": "Natasha",
+      "image": "https://scontent-ort2-1.xx.fbcdn.net/v/t1.0-9/33618703_1637759243011451_3267154628197744640_n.jpg?_nc_cat=0&oh=f4942bf0c4d176303ba23e8ef3fd40c6&oe=5C048E8F",
+      "userId": 3,
+      "id": 2,
+      "statement": "Always searching for things my kids will actually eat!!"
+    }
+  ],
+  "friends": [
     {
       "userId": 4,
-      "recipeId": 2,
-      "id": 10
-    },
+      "friendId": 1,
+      "id": 1
+    }
+  ],
+  "favorites": [
     {
       "userId": 5,
       "recipeId": 1,
-      "id": 17
+      "id": 17,
+      "review": "add a pinch more salt and cover with aluminum foil"
     },
     {
-      "userId": 3,
+      "userId": 5,
+      "recipeId": 2,
+      "id": 27,
+      "review": ""
+    },
+    {
+      "userId": 5,
       "recipeId": 4,
-      "id": 19,
-      "review": "add more salt"
+      "id": 28,
+      "review": ""
+    },
+    {
+      "userId": 5,
+      "recipeId": 3,
+      "id": 29,
+      "review": ""
+    },
+    {
+      "userId": 5,
+      "recipeId": 2,
+      "id": 30,
+      "review": ""
+    },
+    {
+      "userId": 4,
+      "recipeId": 6,
+      "review": "",
+      "id": 35
     },
     {
       "userId": 3,
       "recipeId": 9,
-      "id": 20,
-      "review": "nom nom"
+      "review": "",
+      "id": 39,
+      "rating": 4
     },
     {
       "userId": 3,
       "recipeId": 2,
-      "id": 21
+      "review": "",
+      "rating": 2,
+      "id": 40
     },
     {
       "userId": 3,
-      "recipeId": 3,
-      "id": 22
-    },
-    {
-      "userId": 3,
-      "recipeId": 5,
-      "id": 23
-    },
-    {
-      "userId": 3,
-      "recipeId": 1,
-      "id": 24
-    },
-    {
-      "userId": 3,
-      "recipeId": 2,
-      "id": 25
+      "recipeId": 6,
+      "review": "",
+      "rating": 0,
+      "id": 41
     }
   ],
   "reviews": [],

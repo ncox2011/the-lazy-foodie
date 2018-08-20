@@ -8,13 +8,13 @@ export default class Register extends Component {
         email: '',
         password: ''
     }
-
+//on input change update state with field text
     handleFieldChange = (event) => {
         const stateToChange = {}
         stateToChange[event.target.id] = event.target.value
         this.setState(stateToChange)
     }
-
+//on click save users registration data to database
     handleRegister = e => {
         e.preventDefault()
 
@@ -29,6 +29,7 @@ export default class Register extends Component {
             this.props.history.push('/login')
         })
     }
+    
     render() {
         return (
             <form onSubmit={this.handleRegister}>
