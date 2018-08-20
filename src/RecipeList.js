@@ -74,7 +74,8 @@ export default class RecipeList extends Component {
             body: JSON.stringify({
                 userId: userId,
                 recipeId: +recipeId,
-                review: ''
+                review: '',
+                rating: 0
             })
         }).then(() => {
                 

@@ -56,24 +56,6 @@
       "review": "add a pinch more salt and cover with aluminum foil"
     },
     {
-      "userId": 3,
-      "recipeId": 1,
-      "id": 24,
-      "review": "add more salt and decrease sprouts, yuck"
-    },
-    {
-      "userId": 3,
-      "recipeId": 2,
-      "id": 25,
-      "review": ""
-    },
-    {
-      "userId": 3,
-      "recipeId": 3,
-      "id": 26,
-      "review": ""
-    },
-    {
       "userId": 5,
       "recipeId": 2,
       "id": 27,
@@ -99,21 +81,30 @@
     },
     {
       "userId": 4,
-      "recipeId": 2,
-      "review": "",
-      "id": 33
-    },
-    {
-      "userId": 4,
-      "recipeId": 5,
-      "review": "",
-      "id": 34
-    },
-    {
-      "userId": 4,
       "recipeId": 6,
       "review": "",
       "id": 35
+    },
+    {
+      "userId": 3,
+      "recipeId": 9,
+      "review": "",
+      "id": 39,
+      "rating": 1
+    },
+    {
+      "userId": 3,
+      "recipeId": 2,
+      "review": "",
+      "rating": 4,
+      "id": 40
+    },
+    {
+      "userId": 3,
+      "recipeId": 6,
+      "review": "",
+      "rating": 0,
+      "id": 41
     }
   ],
   "reviews": [],
