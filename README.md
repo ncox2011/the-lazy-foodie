@@ -1,6 +1,6 @@
 **The Lazy Foodie**
 
-**Created using**: ReactJs, JavaScript, Bulma, and Bloomer
+**Created using**: ReactJs, Bulma, and Bloomer
 
 **Hosted**:  JSONServer (API) hosted on Heroku and Application hosted on AWS
 
